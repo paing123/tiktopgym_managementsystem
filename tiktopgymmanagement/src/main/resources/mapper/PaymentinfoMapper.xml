@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tiktop.mapper.PaymentinfoMapper">
+	<insert id="save"> <!-- id and method name must be same -->
+		INSERT INTO
+			paymentinfo(payment_partnername,payment_ac)
+		VALUES
+			(#{paymentinfo.paymentPartnerName},#{paymentinfo.paymentAc})
+	</insert>
+	
+	<update id="update">
+		update paymentinfo set
+			payment_partnername=#{paymentinfo.paymentPartnerName},payment_ac=#{paymentinfo.paymentAc}
+		where paymentinfo_id=#{paymentinfo.paymentinfoId}
+	</update>
+	
+	<delete id="delete">
+	delete from paymentinfo where paymentinfo_id=#{id}
+	</delete>
+	
+	<select id="findPaymentinfo" resultType="com.tiktop.model.Paymentinfo">
+	SELECT * FROM paymentinfo
+	<where>
+	<if test="paymentinfo.paymentinfoId!=null">
+		paymentinfo_id = #{paymentinfo.paymentinfoId}
+	</if>
+	<if test="paymentinfo.paymentPartnerName!=null">
+		payment_partnername Like '%' #{paymentinfo.paymentPartnerName} '%'
+ 	</if>
+ 	<if test="paymentinfo.paymentAc!=null">
+		payment_ac Like '%' #{paymentinfo.paymentAc} '%'
+ 	</if>
+	</where>
+	</select>
+</mapper>

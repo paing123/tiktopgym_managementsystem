@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Booking Package List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:if="${login != null}">
+		<div th:replace="fragments/memberheader :: header"></div>
+	</div>
+	<div th:if="${login == null}">
+		<div th:replace="fragments/header :: header"></div>
+	</div>
+	<h1 align="center">Package List</h1>
+	<br />
+	<div align="center" class="container">
+		<table class="table table-striped">
+			<tbody>
+				<tr>
+					<td th:each="pack : ${packs}" align="center">
+						<h3 th:utext="${pack.packageName}"></h3>
+						<h5 th:utext="${pack.packageDuration}+' '+months"></h5>
+						<h5 th:utext="${pack.packageFees}"></h5> <a class="btn btn-info"
+						th:href="@{/member/packagebookingdetail/{id}(id=${pack.packageId})}">Booking</a>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div align="right">
+		<form th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
+</body>
+</html>

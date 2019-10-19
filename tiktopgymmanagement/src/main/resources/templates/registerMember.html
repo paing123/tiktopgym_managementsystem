@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Member Register</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<form th:action="@{/registerMember}" th:object="${member}"
+		method="POST">
+		<div th:if="${error}" align="center" style="color: red;"><h3 th:utext="${error}"></h3>
+		</div>
+		<table class="table table-striped">
+			<tr>
+				<td></td>
+				<td><h1 align="left">Register a Member:</h1></td>
+
+			</tr>
+			<tr>
+				<td align="right">Member Name:</td>
+				<td><input type="text" th:field="*{memberName}"
+					autofocus="autofocus">
+					<div class="col-sm-10" th:if="${#fields.hasErrors('memberName')}"
+						th:errors="*{memberName}" th:style="${'color:red'}"></div></td>
+
+			</tr>
+			<tr>
+				<td align="right">Phone:</td>
+				<td><input type="text" th:field="*{memberPhone}">
+					<div class="col-sm-10" th:if="${#fields.hasErrors('memberPhone')}"
+						th:errors="*{memberPhone}" th:style="${'color:red'}"></div></td>
+			</tr>
+			<tr>
+				<td align="right">Address:</td>
+				<td><input type="text" th:field="*{memberAddress}">
+					<div class="col-sm-10"
+						th:if="${#fields.hasErrors('memberAddress')}"
+						th:errors="*{memberAddress}" th:style="${'color:red'}"></div></td>
+			</tr>
+			<tr>
+				<td align="right">Email:</td>
+				<td><input type="text" th:field="*{memberEmail}">
+					<div class="col-sm-10" th:if="${#fields.hasErrors('memberEmail')}"
+						th:errors="*{memberEmail}" th:style="${'color:red'}"></div></td>
+			</tr>
+			<tr>
+				<td align="right">Login Name:</td>
+				<td><input type="text" th:field="*{login}">
+					<div class="col-sm-10" th:if="${#fields.hasErrors('login')}"
+						th:errors="*{login}" th:style="${'color:red'}"></div></td>
+			</tr>
+			<tr>
+				<td align="right">Password:</td>
+				<td><input type="password" th:field="*{password}"></td>
+					<div class="col-sm-10" th:if="${#fields.hasErrors('password')}"
+						th:errors="*{password}" th:style="${'color:red'}"></div>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="left"><input type="submit" value="Register" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>

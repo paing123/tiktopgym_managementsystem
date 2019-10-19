@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Customer List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Trainer List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchTrainer}" th:object="${trainer}"
+			method="POST">
+			<table class="table table-striped">
+				<tbody>
+
+					<tr>
+						<td>Trainer Name<br /> <input type="text"
+							th:field="*{trainerName}" /></td>
+						<td>Trainer Type<br /> <input type="text"
+							th:field="*{trainerType}" /></td>
+					</tr>
+
+					<tr>
+						<td>Phone<br /> <input type="text"
+							th:field="*{trainerPhone}" value="''" /></td>
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
+							th:href="@{/admin/addTrainer}" class="btn btn-primary">Add
+								Trainer</a></td>
+					</tr>
+				</tbody>
+			</table>
+			</form>
+			<div align="right">
+				<form th:action="@{/logout}" method="POST">
+					<input class="btn btn-primary" type="submit" value="Logout" />
+				</form>
+			</div>
+
+			<div align="center" class="container">
+				<table class="table table-striped">
+					<thead>
+					<tr th:if="${trainers != null}">
+							<td class="font-weight-bold"><h3>ID</h3></td>
+							<td class="font-weight-bold"><h3>Name</h3></td>
+							<td class="font-weight-bold"><h3>Type</h3></td>
+							<td class="font-weight-bold"><h3>Phone</h3></td>
+							<td class="font-weight-bold"><h3>Address</h3></td>
+							<td class="font-weight-bold"><h3>Personal Trainer Fees</h3></td>
+							<td class="font-weight-bold"><h3>Created
+									Date</h3></td>
+							<td class="font-weight-bold"><h3>Updated
+									Date</h3></td>
+							<td colspan="3" align="center" class="font-weight-bold"><h3>Action</h3></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="trainer : ${trainers}">
+							<td th:utext="${trainer.trainerId}"></td>
+							<td th:utext="${trainer.trainerName}"></td>
+							<td th:utext="${trainer.trainerType}"></td>
+							<td th:utext="${trainer.trainerPhone}"></td>
+							<td th:utext="${trainer.trainerAddress}"></td>
+							<td th:utext="${trainer.trainerFees}"></td>
+							<td th:utext="${trainer.createDate}"></td>
+							<td th:utext="${trainer.updateDate}"></td>
+							<td><a class="glyphicon glyphicon-cog"
+								th:href="@{/admin/detailTrainer/{id}(id=${trainer.trainerId})}"></a></td>
+							<td><a class="glyphicon glyphicon-pencil"
+								th:href="@{/admin/updateTrainer/{id}(id=${trainer.trainerId})}"></a></td>
+							<td><a class="glyphicon glyphicon-trash"
+								th:href="@{/admin/deleteTrainer/{id}(id=${trainer.trainerId})}"></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
+</body>
+</html>

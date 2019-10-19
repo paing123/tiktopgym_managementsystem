@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Package List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Package List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchPackage}" th:object="${pack}"
+			method="POST">
+			<table class="table table-striped">
+
+				<tbody>
+
+					<tr>
+						<td>Package Name<br /> <input type="text"
+							th:field="*{packageName}" /></td>
+						<td>Duration<br /> <input type="text"
+							th:field="*{packageDuration}" /> months</td>
+					</tr>
+
+					<tr>
+						<td>Fees<br /> <input type="text" th:field="*{packageFees}" /></td>
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
+							th:href="@{/admin/addPackage}" class="btn btn-primary">Add
+								Package</a></td>
+					</tr>
+				</tbody>
+
+			</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+		<div align="center" class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr th:if="${packs != null}">
+						<td class="font-weight-bold"><h3>ID</h3></td>
+						<td class="font-weight-bold"><h3>Name</h3></td>
+						<td class="font-weight-bold"><h3>
+								Duration</h3></td>
+						<td class="font-weight-bold"><h3>Fees</h3></td>
+						<td class="font-weight-bold"><h3>Create
+								Date</h3></td>
+						<td class="font-weight-bold"><h3>Update
+								Date</h3></td>
+						<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="pack : ${packs}">
+						<td th:utext="${pack.packageId}">...</td>
+						<td th:utext="${pack.packageName}">...</td>
+						<td th:utext="${pack.packageDuration}+' '+months"></td>
+						<td th:utext="${pack.packageFees}">...</td>
+						<td th:utext="${pack.createDate}">...</td>
+						<td th:utext="${pack.updateDate}">...</td>
+						<td><a
+							th:href="@{/admin/updatePackage/{id}(id=${pack.packageId})}">Update</a></td>
+						<td><a
+							th:href="@{/admin/deletePackage/{id}(id=${pack.packageId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Payment Information List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Payment Information List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchPaymentinfo}"
+			th:object="${paymentinfo}" method="POST">
+			<table class="table table-striped">
+				<tbody>
+
+					<tr>
+						<td>Partner Name<br /> <input type="text"
+							th:field="*{paymentPartnerName}" /></td>
+						<td>Payment Ac<br /> <input type="text"
+							th:field="*{paymentAc}" /></td>
+					</tr>
+
+					<tr>
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
+							th:href="@{/admin/addPaymentinfo}" class="btn btn-primary">Add
+								Payment</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+		<div align="center" class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr th:if="${paymentinfos != null}">
+						<td class="font-weight-bold"><h3>ID</h3></td>
+						<td class="font-weight-bold"><h3>Payment Partner Name</h3></td>
+						<td class="font-weight-bold"><h3>Payment Ac</h3></td>
+						<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="paymentinfo : ${paymentinfos}">
+						<td th:utext="${paymentinfo.paymentinfoId}">...</td>
+						<td th:utext="${paymentinfo.paymentPartnerName}">...</td>
+						<td th:utext="${paymentinfo.paymentAc}">...</td>
+						<td><a
+							th:href="@{/admin/updatePaymentinfo/{id}(id=${paymentinfo.paymentinfoId})}">Update</a></td>
+						<td><a
+							th:href="@{/admin/deletePaymentinfo/{id}(id=${paymentinfo.paymentinfoId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

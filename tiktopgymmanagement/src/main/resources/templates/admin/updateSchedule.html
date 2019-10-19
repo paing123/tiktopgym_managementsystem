@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Update Customer</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<form th:action="@{/admin/updateSchedule}" th:object="${schedule}"
+		method="POST">
+		<input type="hidden" th:field="*{scheduleId}" />
+		<table class="table table-bordered">
+			<tr>
+				<td colspan="2"><h1 align="center">Update a Schedule:</h1></td>
+			</tr>
+			<tr>
+				<td align="right">Time:</td>
+				<td><select th:field="*{scheduleTime}">
+						<option th:value="'null'" th:text="--Select--"></option>
+						<option th:value="'9am - 11am'" th:utext="9am-11am"></option>
+						<option th:value="'11am - 1pm'" th:utext="11am-1pm"></option>
+						<option th:value="'1pm - 3pm'" th:utext="1pm-3pm"></option>
+						<option th:value="'3pm - 5pm'" th:utext="3pm-5pm"></option>
+						<option th:value="'5pm - 7pm'" th:utext="5pm-7pm"></option>
+						<option th:value="'7pm - 9pm'" th:utext="7pm-9pm"></option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">Day:</td>
+				<td><select th:field="*{scheduleDay}">
+						<option th:value="null" th:text="--Select--"></option>
+						<option th:value="'Sunday'" th:text="Sunday"></option>
+						<option th:value="'Monday'" th:text="Monday"></option>
+						<option th:value="'Tuesday'" th:text="Tuesday"></option>
+						<option th:value="'Wednesday'" th:text="Wednesday"></option>
+						<option th:value="'Thursday'" th:text="Thursday"></option>
+						<option th:value="'Friday'" th:text="Friday"></option>
+						<option th:value="'Satursday'" th:text="Satursday"></option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">Class:</td>
+				<td><select th:field="*{classesId}">
+						<option th:value="0" th:text="--Select--"></option>
+						<option th:each="classes : ${classess}"
+							th:value="${classes.classesId}" th:utext="${classes.classesName}"></option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">Trainer:</td>
+				<td><select th:field="*{trainerId}">
+						<option th:value="0" th:text="--Select--"></option>
+						<option th:each="trainer : ${trainers}"
+							th:value="${trainer.trainerId}" th:utext="${trainer.trainerName}"></option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">Fees:</td>
+				<td><input type="text" th:field="${schedule.fees}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit"
+					value="Update" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>

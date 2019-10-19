@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Customer List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Classes List</h1>
+	<br />
+	<div align="center" class="container">
+	<form data-th-action="@{/admin/searchClasses}" th:object="${classes}"
+				method="POST">
+		<table class="table table-striped">
+				<tbody>
+
+					<tr>
+						<td>Class Name<br /> <input type="text"
+							th:field="*{classesName}" /></td>
+					</tr>
+
+					<tr>
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
+							th:href="@{/admin/addClasses}" class="btn btn-primary">Add
+								Class</a></td>
+					</tr>
+				</tbody>
+		</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+		<div align="center" class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr th:if="${classess != null}">
+						<td class="font-weight-bold"><h3>ID</h3></td>
+						<td class="font-weight-bold"><h3>Class
+								Name</h3></td>
+						<td class="font-weight-bold"><h3>Create
+								Date</h3></td>
+						<td class="font-weight-bold"><h3>Update
+								Date</h3></td>
+						<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="class : ${classess}">
+						<td th:utext="${class.classesId}">...</td>
+						<td th:utext="${class.classesName}">...</td>
+						<td th:utext="${class.createDate}">...</td>
+						<td th:utext="${class.updateDate}">...</td>
+						<td><a
+							th:href="@{/admin/updateClasses/{id}(id=${class.classesId})}">Update</a></td>
+						<td><a
+							th:href="@{/admin/deleteClasses/{id}(id=${class.classesId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tiktop.mapper.BookingMapper">
+	<select id="findScheduleByDate"
+		resultType="com.tiktop.model.Schedule">
+		SELECT DISTINCT create_date FROM schedule ORDER BY
+		create_date
+	</select>
+
+	<select id="scheduleBookingDetail"
+		resultType="com.tiktop.model.Schedule">
+		SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id
+		join trainer t on s.trainer_id = t.trainer_id
+		<where>
+			<if test="schedule.scheduleId!=null and schedule.scheduleId!=0">
+				schedule_id = #{schedule.scheduleId}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="save"> <!-- id and method name must be same -->
+		INSERT INTO
+		booking(schedule_id,trainer_id,package_id,member_id,create_date,status,expired_date)
+		VALUES
+		(#{booking.scheduleId},#{booking.trainerId},#{booking.packageId},#{booking.memberId},NOW(),'pending',#{booking.expiredDate})
+	</insert>
+	
+	<select id="findScheduleBooking" resultType="com.tiktop.model.Booking">
+		SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id
+		join member m on m.member_id = b.member_id
+		<where>
+			<if test="booking.scheduleId!=null">
+				b.schedule_id = #{booking.scheduleId}
+			</if>
+			<if test="booking.status!=null">
+				and b.status = #{booking.status}
+			</if>
+			<if test="booking.login!=null">
+				and m.login = #{booking.login}
+			</if>
+			<if test="booking.createDate!=null">
+				and b.create_date = #{booking.createDate}
+			</if>
+		</where>
+	</select>
+	
+	<select id="findPackageBooking" resultType="com.tiktop.model.Booking">
+		SELECT * FROM booking b join package p on b.package_id = p.package_id
+		join member m on m.member_id = b.member_id
+		<where>
+			<if test="booking.packageId!=null">
+				b.package_id = #{booking.packageId}
+			</if>
+			<if test="booking.status!=null">
+				and b.status = #{booking.status}
+			</if>
+			<if test="booking.login!=null">
+				and m.login = #{booking.login}
+			</if>
+			<if test="booking.createDate!=null">
+				and b.create_date = #{booking.createDate}
+			</if>
+		</where>
+	</select>
+	
+	<select id="findAllBooking" resultType="com.tiktop.model.Booking">
+		SELECT * FROM booking
+		<where>
+			<if test="booking.packageId!=null">
+				b.package_id = #{booking.packageId}
+			</if>
+			<if test="booking.scheduleId!=null">
+				b.schedule_id = #{booking.scheduleId}
+			</if>
+			<if test="booking.memberId!=null">
+				b.member_id = #{booking.memberId}
+			</if>
+		</where>
+	</select>
+	
+	<!-- <select id="findMemberBooking" resultType="com.tiktop.model.Booking">
+		SELECT * FROM booking b join member m on b.member_id = m.member_id
+		<where>
+			<if test="booking.packageId!=null">
+				b.package_id = #{booking.packageId}
+			</if>
+			<if test="booking.scheduleId!=null">
+				b.schedule_id = #{booking.scheduleId}
+			</if>
+			<if test="booking.memberId!=null">
+				b.member_id = #{booking.memberId}
+			</if>
+		</where>
+	</select> -->
+	
+	<update id="confirmBooking">
+		update booking set
+			status='confirmed'
+		where booking_id=#{booking.bookingId}
+	</update>
+	
+	<delete id="delete">
+	delete from booking where booking_id=#{id}
+	</delete>
+</mapper>

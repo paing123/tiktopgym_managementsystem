@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Update Member</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap-grid.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap-grid.min.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap-reboot.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap-reboot.min.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/bootstrap}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min}"></script>
+</head>
+<body>
+<div th:replace="fragments/adminheader :: header"></div>
+	<form th:action="@{/admin/updateMember}" th:object="${member}"
+		method="POST">
+		<input type="hidden" th:field="*{memberId}"/>
+		<table class="table table-bordered">
+			<tr>
+				<td colspan="2"><h1 align="center">Update a Member:</h1></td>
+			</tr>
+			<tr>
+				<td align="right">Name:</td>
+				<td><input type="text" th:field="*{memberName}" /></td>
+			</tr>
+			<tr>
+				<td align="right">Phone:</td>
+				<td><input type="text" th:field="*{memberPhone}" /></td>
+			</tr>
+			<tr>
+				<td align="right">Address:</td>
+				<td><input type="text" th:field="*{memberAddress}" /></td>
+			</tr>
+			<tr>
+				<td align="right">Email:</td>
+				<td><input type="text" th:field="*{memberEmail}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit"
+					value="Update" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>

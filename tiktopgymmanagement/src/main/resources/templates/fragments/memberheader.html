@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<title>TikTop Gym Management System</title>
+</head>
+<body>
+	<div th:fragment="header">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">TikTop Gym</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a th:href="@{/}">Home</a></li>
+					<li><a th:href="@{/bookingSchedule}">Schedule</a></li>
+					<li><a th:href="@{/bookingPackage}">Package</a></li>
+					<li><a th:href="@{/bookingTrainer}">Trainer</a></li>
+					<li><a th:href="@{/member/memberBookings}">Member Bookings</a></li>
+					<li><a th:href="@{/login}">Log in</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>
+</html>

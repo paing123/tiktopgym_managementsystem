@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Member List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Member List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchMember}" th:object="${member}"
+			method="POST">
+			<table class="table table-striped">
+
+				<tbody>
+
+					<tr>
+						<td>Name<br /> <input type="text" th:field="*{memberName}"
+							value="''" /></td>
+						<td>Phone Number<br /> <input type="text"
+							th:field="*{memberPhone}" value="''" /></td>
+					</tr>
+
+					<tr>
+						<td>address<br /> <input type="text"
+							th:field="*{memberAddress}" value="''" /></td>
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />
+					</tr>
+				</tbody>
+
+			</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+		<div align="center" class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr th:if="${members != null}">
+						<td class="font-weight-bold"><h3>ID</h3></td>
+						<td class="font-weight-bold"><h3>Name</h3></td>
+						<td class="font-weight-bold"><h3>Phone</h3></td>
+						<td class="font-weight-bold"><h3>Address</h3></td>
+						<td class="font-weight-bold"><h3>Email</h3></td>
+						<td class="font-weight-bold"><h3>Created
+								Date</h3></td>
+						<td class="font-weight-bold"><h3>Updated
+								Date</h3></td>
+						<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="member : ${members}">
+						<td th:utext="${member.memberId}">...</td>
+						<td th:utext="${member.memberName}">...</td>
+						<td th:utext="${member.memberPhone}">...</td>
+						<td th:utext="${member.memberAddress}">...</td>
+						<td th:utext="${member.memberEmail}">...</td>
+						<td th:utext="${member.createDate}">...</td>
+						<td th:utext="${member.updateDate}">...</td>
+						<td><a
+							th:href="@{/admin/updateMember/{id}(id=${member.memberId})}">Update</a></td>
+						<td><a
+							th:href="@{/admin/deleteMember/{id}(id=${member.memberId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

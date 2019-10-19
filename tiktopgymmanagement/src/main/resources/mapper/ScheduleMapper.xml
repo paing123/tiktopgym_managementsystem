@@ -1,0 +1,54 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tiktop.mapper.ScheduleMapper">
+	<insert id="save"> <!-- id and method name must be same -->
+		INSERT INTO
+		schedule(schedule_time,schedule_day,classes_id,trainer_id,create_date,fees)
+		VALUES
+		(#{schedule.scheduleTime},#{schedule.scheduleDay},#{schedule.classesId},#{schedule.trainerId},
+		#{schedule.createDate},#{schedule.fees})
+	</insert>
+
+	<update id="update">
+		update schedule set
+		schedule_time=#{schedule.scheduleTime},schedule_day=#{schedule.scheduleDay},
+		classes_id=#{schedule.classesId},trainer_id=#{schedule.trainerId},fees=#{schedule.fees},
+		update_date=CURDATE()
+		where schedule_id=#{schedule.scheduleId}
+	</update>
+
+	<delete id="delete">
+		delete from schedule where schedule_id=#{id}
+	</delete>
+
+	<select id="findSchedule" resultType="com.tiktop.model.Schedule">
+		SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id
+		join trainer t on s.trainer_id = t.trainer_id
+		<where>
+			<if test="schedule.scheduleId!=null">
+				schedule_id = #{schedule.scheduleId}
+			</if>
+			<if test="schedule.scheduleTime!=null">
+				and s.schedule_time Like '%' #{schedule.scheduleTime} '%'
+			</if>
+			<if test="schedule.scheduleDay!=null">
+				and s.schedule_day like '%' #{schedule.scheduleDay} '%'
+			</if>
+			<if test="schedule.createDate!=null">
+				and s.create_date = #{schedule.createDate}
+			</if>
+			<if test="schedule.classesId!=0 and schedule.classesId!=null">
+				and s.classes_id = #{schedule.classesId}
+			</if>
+			<if test="schedule.trainerId!=0 and schedule.trainerId!=null">
+				and s.trainer_id = #{schedule.trainerId}
+			</if>
+			<if test="schedule.fees!=0 and schedule.fees!=null">
+				and s.fees = #{schedule.fees}
+			</if>
+		</where>
+		order by s.create_date
+	</select>
+</mapper>

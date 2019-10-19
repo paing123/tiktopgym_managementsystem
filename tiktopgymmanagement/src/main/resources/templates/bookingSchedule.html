@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Book the Schedule</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<style>
+.grid-container-column {
+	display: grid;
+	grid-template-columns: 215px 215px 215px 215px 215px 215px 215px;
+	font-size: 30px;
+	background-color: #2196F3;
+}
+
+.grid-container-row {
+	display: grid;
+	grid-template-rows: 300px 300px 300px 200px 200px 200px 200px;
+	background-color: #2196F3;
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 50px;
+	font-size: 20px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+	<div th:if="${login != null}">
+		<div th:replace="fragments/memberheader :: header"></div>
+	</div>
+	<div th:if="${login == null}">
+		<div th:replace="fragments/header :: header"></div>
+	</div>
+	<h1 align="center">Class Schedule List for Booking</h1>
+	<div align="right">
+		<form action="#" th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
+	<div class="grid-container-column">
+		<div class="grid-item" th:each="scheduleDate : ${scheduleDates}"
+			th:text="${scheduleDate.createDate}"></div>
+	</div>
+	<div class="grid-container-column">
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule1}">
+				<label th:text="${schedule.classesName}"></label> <label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label><br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule2}">
+				<label th:text="${schedule.classesName}"></label> <label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label> <br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule3}">
+				<label th:text="${schedule.classesName}"></label><label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label> <br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule4}">
+				<label th:text="${schedule.classesName}"></label><label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label> <br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule5}">
+				<label th:text="${schedule.classesName}"></label><label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label> <br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule6}">
+				<label th:text="${schedule.classesName}"></label><label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label> <br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+		<div class="grid-container-row">
+			<div class="grid-item" th:each="schedule : ${schedule7}">
+				<label th:text="${schedule.classesName}"></label><label
+					th:text="${schedule.scheduleDay}"></label> <label
+					th:text="${schedule.scheduleTime}"></label> <label
+					th:text="${schedule.fees}"></label> <br> <a
+					th:href="@{/member/schedulebookingdetail/{id}(id=${schedule.scheduleId})}">Booking</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

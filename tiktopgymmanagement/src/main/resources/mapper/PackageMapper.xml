@@ -1,0 +1,43 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tiktop.mapper.PackageMapper">
+	<insert id="save"> <!-- id and method name must be same -->
+		INSERT INTO
+			package(package_name,package_duration,package_fees,create_date)
+		VALUES
+			(#{pack.packageName},#{pack.packageDuration},#{pack.packageFees},
+			CURDATE())
+	</insert>
+	
+	<update id="update">
+		update package set
+			package_name=#{pack.packageName},package_duration=#{pack.packageDuration},
+			package_fees=#{pack.packageFees},update_date=CURDATE()
+		where package_id=#{pack.packageId}
+	</update>
+	
+	<delete id="delete">
+	delete from package where package_id=#{id}
+	</delete>
+	
+	<select id="findPackage" resultType="com.tiktop.model.Package">
+	SELECT * FROM package
+	<where>
+	<if test="pack.packageId!=null and pack.packageId!=0">
+		package_id = #{pack.packageId}
+	</if>
+	<if test="pack.packageName!=null">
+		and package_name Like '%' #{pack.packageName} '%'
+ 	</if>
+	<if test="pack.packageDuration!=null and pack.packageDuration!=0">
+		and package_duration like '%' #{pack.packageDuration} '%'
+	</if>
+	<if test="pack.packageFees!=null">
+		and package_fees like = #{pack.packageFees}
+	</if>
+	</where>
+	order by package_fees desc
+	</select>
+</mapper>

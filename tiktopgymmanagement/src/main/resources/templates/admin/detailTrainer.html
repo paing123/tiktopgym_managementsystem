@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Trainer Detail</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h2 align="center">Trainer Detail</h2>
+		<table class="table table-striped" th:object="${trainer}">
+			<tr>
+				<th>Trainer ID</th>
+				<td><label th:utext="${trainer.trainerId}"></label></td>
+			</tr>
+			<tr>
+				<th>Trainer Name</th>
+				<td><label th:utext="${trainer.trainerName}"></label></td>
+			</tr>
+			<tr>
+				<th>Trainer Type</th>
+				<td><label th:utext="${trainer.trainerType}"></label></td>
+			</tr>
+			<tr>
+				<th>Trainer Phone</th>
+				<td><label th:utext="${trainer.trainerPhone}"></label></td>
+			</tr>
+			<tr>
+				<th>Trainer Address</th>
+				<td><label th:utext="${trainer.trainerAddress}"></label></td>
+			</tr>
+			<tr>
+				<th>Personal Trainer Fees</th>
+				<td><label th:utext="${trainer.trainerFees}"></label></td>
+			</tr>
+			<tr>
+				<th>Created Date</th>
+				<td><label th:utext="${trainer.createDate}"></label></td>
+			</tr>
+			<tr>
+				<th>Updated Date</th>
+				<td><label th:utext="${trainer.updateDate}"></label></td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td><label th:utext="${trainer.trainerDescription}"></label></td>
+			</tr>
+			<tr>
+				<th>Trainer Image</th>
+				<td><img width="300" height="400"
+					th:src="@{/trainer-image/}+${trainer.trainerImageName}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="left"><a
+							th:href="@{/admin/searchTrainer}"  class="btn btn-primary">Back</a></td>
+			</tr>
+		</table>
+</body>
+</html>

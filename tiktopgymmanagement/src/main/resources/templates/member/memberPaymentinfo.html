@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Payment Information List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/memberheader :: header"></div>
+	<h1 align="center">Payment Information</h1>
+	<br />
+	<div align="center" class="container">
+		<table class="table table-striped">
+			<tr>
+				<th class="font-weight-bold"><h3>Payment Partner Name</h3></th>
+				<th class="font-weight-bold"><h3>Payment Ac</h3></th>
+			</tr>
+			<tbody>
+				<tr th:each="paymentinfo : ${paymentinfos}">
+					<td th:utext="${paymentinfo.paymentPartnerName}">...</td>
+					<td th:utext="${paymentinfo.paymentAc}">...</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div align="center" th:object="${admin}">
+	<h4 style="color: red;">Your Boooking Id is </h4><h4 style="color: red;" align="center" th:utext="${bookingId}"></h4>
+		<p>Note your booking id and if your payment is complete with above third party payment, please send receipt to  <br>
+		   Viber number is <h4 th:utext="${admin.memberPhone}"></h4> <br>
+		   gmail address is <h4 th:utext="${admin.memberEmail}"></h4> <br>
+		   <h2 style="color: blue;">Thanks for your joining with our gym!!!</h2>
+	</div>
+	
+	<div align="right">
+		<form th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
+</body>
+</html>

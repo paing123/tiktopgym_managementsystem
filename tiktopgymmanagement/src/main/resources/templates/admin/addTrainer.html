@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Add Customer</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<form th:action="@{/admin/addTrainer}" th:object="${trainer}" enctype="multipart/form-data"
+		method="POST">
+
+		<table class="table table-striped">
+			<tr>
+				<td></td>
+				<td><h1 align="left">Register a Trainer:</h1></td>
+
+			</tr>
+			<tr>
+				<td align="right">Trainer Name:</td>
+				<td><input type="text" th:field="*{trainerName}"
+					autofocus="autofocus"></td>
+
+			</tr>
+			<tr>
+				<td align="right">Trainer Type:</td>
+				<td><input type="text" th:field="*{trainerType}"></td>
+			</tr>
+			<tr>
+				<td align="right">Image:</td>
+				<td><input type="file" th:field="*{trainerImage}"></td>
+			</tr>
+			<tr>
+				<td align="right">Phone:</td>
+				<td><input type="text" th:field="*{trainerPhone}"></td>
+			</tr>
+			<tr>
+				<td align="right">Address:</td>
+				<td><input type="text" th:field="*{trainerAddress}"></td>
+			</tr>
+			<tr>
+				<td align="right">Personal Trainer Fees:</td>
+				<td><input type="text" th:field="*{trainerFees}"></td>
+			</tr>
+			<tr>
+				<td align="right">Description:</td>
+				<td><textarea th:field="*{trainerDescription}"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="left"><input type="submit" value="Register" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>

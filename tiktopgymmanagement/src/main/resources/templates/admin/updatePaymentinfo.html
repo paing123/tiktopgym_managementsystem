@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Update Payment Information</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/adminheader :: header"></div>
+	<form th:action="@{/admin/updatePaymentinfo}" th:object="${paymentinfo}"
+		method="POST">
+		<input type="hidden" th:field="*{paymentinfoId}"/>
+		<table class="table table-bordered">
+			<tr>
+				<td colspan="2"><h1 align="center">Update a Payment:</h1></td>
+			</tr>
+			<tr>
+				<td align="right">Payment Partner Name:</td>
+				<td><input type="text" th:field="*{paymentPartnerName}" /></td>
+			</tr>
+			<tr>
+				<td align="right">Payment Ac:</td>
+				<td><input type="text" th:field="*{paymentAc}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit"
+					value="Update" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>

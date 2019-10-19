@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to TikTop Gym</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body bgcolor="#E6E6FA">
+	<div th:if="${login != null}">
+		<div th:replace="fragments/memberheader :: header"></div>
+	</div>
+	<div th:if="${login == null}">
+		<div th:replace="fragments/header :: header"></div>
+	</div>
+	<h1>Home Page</h1>
+</body>
+</html>

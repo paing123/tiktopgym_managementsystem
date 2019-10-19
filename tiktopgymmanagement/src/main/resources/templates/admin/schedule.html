@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Customer List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Schedule List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchSchedule}"
+			th:object="${schedule}" method="POST">
+			<table class="table table-striped">
+				<tbody>
+					<tr>
+						<td>Schedule Time<br /> <select th:field="*{scheduleTime}">
+								<option th:value="null" th:text="--Select--"></option>
+								<option th:value="'9am - 11am'" th:utext="9am-11am"></option>
+								<option th:value="'11am - 1pm'" th:utext="11am-1pm"></option>
+								<option th:value="'1pm - 3pm'" th:utext="1pm-3pm"></option>
+								<option th:value="'3pm - 5pm'" th:utext="3pm-5pm"></option>
+								<option th:value="'5pm - 7pm'" th:utext="5pm-7pm"></option>
+								<option th:value="'7pm - 9pm'" th:utext="7pm-9pm"></option>
+						</select></td>
+
+						<td>Trainer Name<br /> <select th:field="*{trainerId}">
+								<option th:value="0" th:text="--Select--"></option>
+								<option th:each="trainer : ${trainers}"
+									th:value="${trainer.trainerId}"
+									th:utext="${trainer.trainerName}"></option>
+						</select></td>
+					</tr>
+
+					<tr>
+						<td>Class Name<br /> <select th:field="*{classesId}">
+								<option th:value="0" th:text="--Select--"></option>
+								<option th:each="classes : ${classess}"
+									th:value="${classes.classesId}"
+									th:utext="${classes.classesName}"></option>
+						</select></td>
+
+						<td>Schedule Day<br /> <select th:field="*{scheduleDay}">
+								<option th:value="null" th:text="--Select--"></option>
+								<option th:value="'Sunday'" th:text="Sunday"></option>
+								<option th:value="'Monday'" th:text="Monday"></option>
+								<option th:value="'Tuesday'" th:text="Tuesday"></option>
+								<option th:value="'Wednesday'" th:text="Wednesday"></option>
+								<option th:value="'Thursday'" th:text="Thursday"></option>
+								<option th:value="'Friday'" th:text="Friday"></option>
+								<option th:value="'Satursday'" th:text="Satursday"></option>
+						</select></td>
+
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
+							th:href="@{/admin/addSchedule}" class="btn btn-primary">Add
+								Schedule</a></td>
+					</tr>
+				</tbody>
+
+			</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+		<div align="center" class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr th:if="${schedules != null}">
+						<td class="font-weight-bold"><h3>ID</h3></td>
+						<td class="font-weight-bold"><h3>Time</h3></td>
+						<td class="font-weight-bold"><h3>Day</h3></td>
+						<td class="font-weight-bold"><h3>Class</h3></td>
+						<td class="font-weight-bold"><h3>Trainer</h3></td>
+						<td class="font-weight-bold"><h3>Fees</h3></td>
+						<td class="font-weight-bold"><h3>Created Date</h3></td>
+						<td class="font-weight-bold"><h3>Updated Date</h3></td>
+						<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="schedule : ${schedules}">
+						<td th:utext="${schedule.scheduleId}">...</td>
+						<td th:utext="${schedule.scheduleTime}">...</td>
+						<td th:utext="${schedule.scheduleDay}">...</td>
+						<td th:utext="${schedule.classesName}">...</td>
+						<td th:utext="${schedule.trainerName}">...</td>
+						<td th:utext="${schedule.fees}">...</td>
+						<td th:utext="${schedule.createDate}">...</td>
+						<td th:utext="${schedule.updateDate}">...</td>
+						<td><a
+							th:href="@{/admin/updateSchedule/{id}(id=${schedule.scheduleId})}">Update</a></td>
+						<td><a
+							th:href="@{/admin/deleteSchedule/{id}(id=${schedule.scheduleId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

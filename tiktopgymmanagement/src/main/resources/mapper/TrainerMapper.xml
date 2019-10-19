@@ -1,0 +1,47 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tiktop.mapper.TrainerMapper">
+	<insert id="save"> <!-- id and method name must be same -->
+		INSERT INTO
+			trainer(trainer_name,trainer_type,trainer_image_name,trainer_phone,trainer_address,create_date,trainer_description,trainer_fees)
+		VALUES
+			(#{trainer.trainerName},#{trainer.trainerType},#{trainer.trainerImageName},#{trainer.trainerPhone},#{trainer.trainerAddress},CURDATE(),
+			#{trainer.trainerDescription},#{trainer.trainerFees})
+	</insert>
+	
+	<update id="update">
+		update trainer set
+			trainer_name=#{trainer.trainerName},trainer_type=#{trainer.trainerType},
+			trainer_phone=#{trainer.trainerPhone},trainer_address=#{trainer.trainerAddress},
+			trainer_description=#{trainer.trainerDescription},update_date=CURDATE(),
+			trainer_fees=#{trainer.trainerFees}
+		where trainer_id=#{trainer.trainerId}
+	</update>
+	
+	<delete id="delete">
+	delete from trainer where trainer_id=#{id}
+	</delete>
+	
+	<select id="findTrainer" resultType="com.tiktop.model.Trainer">
+	SELECT * FROM trainer
+	<where>
+	<if test="trainer.trainerId!=null">
+		trainer_id = #{trainer.trainerId}
+	</if>
+	<if test="trainer.trainerName!=null">
+		trainer_name Like '%' #{trainer.trainerName} '%'
+ 	</if>
+	<if test="trainer.trainerPhone!=null">
+		and trainer_phone like '%' #{trainer.trainerPhone} '%'
+	</if>
+	<if test="trainer.trainerAddress!=null">
+		and trainer_address like '%' #{trainer.trainerAddress} '%'
+	</if>
+	<if test="trainer.trainerFees!=null and trainer.trainerFees!=0">
+		and trainer_fees like '%' #{trainer.trainerFees} '%'
+	</if>
+	</where>
+	</select>
+</mapper>

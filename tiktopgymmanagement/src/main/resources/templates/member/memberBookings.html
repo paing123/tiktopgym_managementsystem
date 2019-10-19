@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Customer List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/memberheader :: header"></div>
+	<h1 align="center">Member Booking List</h1>
+	<br />
+	<div align="center" class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<td class="font-weight-bold"><h3>Booking ID</h3></td>
+					<td class="font-weight-bold"><h3>Package</h3></td>
+					<td class="font-weight-bold"><h3>Schedule Time</h3></td>
+					<td class="font-weight-bold"><h3>Schedule Day</h3></td>
+					<td class="font-weight-bold"><h3>Booking Time</h3></td>
+					<td class="font-weight-bold"><h3>Status</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="booking : ${packageBookings}">
+					<td th:utext="${booking.bookingId}">...</td>
+					<td th:utext="${booking.packageName}">...</td>
+					<td>...</td>
+					<td>...</td>
+					<td th:utext="${booking.createDate}">...</td>
+					<td th:utext="${booking.status}">...</td>
+				</tr>
+				<tr th:each="booking : ${scheduleBookings}">
+					<td th:utext="${booking.bookingId}">...</td>
+					<td>...</td>
+					<td th:utext="${booking.scheduleTime}">...</td>
+					<td th:utext="${booking.scheduleDay}">...</td>
+					<td th:utext="${booking.createDate}">...</td>
+					<td th:utext="${booking.status}">...</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div align="right">
+		<form th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
+</body>
+</html>
