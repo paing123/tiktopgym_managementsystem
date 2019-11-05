@@ -1,0 +1,66 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tiktop.mapper.AttendanceMapper">
+	<insert id="save"> <!-- id and method name must be same -->
+		INSERT INTO
+		attendance(height,weight,attendance_date,member_id)
+		VALUES
+		(#{attendance.height},#{attendance.weight},#{attendance.attendanceDate},#{attendance.memberId})
+	</insert>
+
+	<update id="update">
+		update attendance set
+		height=#{attendance.height},weight=#{attendance.weight},attendance_date=#{attendance.attendanceDate},
+		member_id=#{attendance.memberId},update_date=CURDATE()
+		where
+		attendance_id=#{attendance.attendanceId}
+	</update>
+
+	<delete id="delete">
+		delete from attendance where attendance_id=#{id}
+	</delete>
+
+	<select id="checkAttendance"
+		resultType="com.tiktop.model.Attendance">
+		SELECT * FROM attendance
+		<where>
+			attendance_date BETWEEN CAST(#{attendance.startDate} AS DATE)
+			AND
+			CAST(#{attendance.endDate} AS DATE)
+			<if test="attendance.memberId!=null and attendance.memberId!=0">
+				and member_id = #{attendance.memberId}
+			</if>
+		</where>
+	</select>
+	
+	<select id="findAttendanceMemberId"
+		resultType="com.tiktop.model.Attendance">
+		SELECT distinct member_id FROM attendance
+		<where>
+			<if test="attendance.memberId!=null and attendance.memberId!=0">
+				and member_id = #{attendance.memberId}
+			</if>
+		</where>
+	</select>
+
+	<select id="findAttendance"
+		resultType="com.tiktop.model.Attendance">
+		SELECT * FROM attendance
+		<where>
+			<if test="attendance.attendanceId!=null">
+				attendance_id = #{attendance.attendanceId}
+			</if>
+			<if test="attendance.weight!=null and attendance.weight!=0">
+				and weight = #{attendance.weight}
+			</if>
+			<if test="attendance.height!=null and attendance.height!=0">
+				and height = #{attendance.height}
+			</if>
+			<if test="attendance.memberId!=null and attendance.memberId!=0">
+				and member_id = #{attendance.memberId}
+			</if>
+		</where>
+	</select>
+</mapper>

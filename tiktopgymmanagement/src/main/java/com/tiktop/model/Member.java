@@ -4,7 +4,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-public class Member {
+public class Member{
 
 	@NotEmpty(message = "Please Enter Login ID!")
 	private String login;

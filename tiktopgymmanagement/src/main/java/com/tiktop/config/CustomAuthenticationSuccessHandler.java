@@ -1,4 +1,4 @@
-package com.tiktop;
+package com.tiktop.config;
 
 import java.io.IOException;
 import java.util.Set;

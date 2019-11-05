@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Member Attendance List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Attendance List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchAttendance}"
+			th:object="${attendance}" method="POST">
+			<table class="table table-striped">
+				<tbody>
+					<tr>
+						<td>Member ID<br />
+						<select th:field="*{memberId}">
+								<option th:value="0" th:text="--Select--"></option>
+								<option th:each="attendance : ${attendanceMemberIds}"
+									th:value="${attendance.memberId}"
+									th:utext="${attendance.memberId}"></option>
+						</select></td>
+
+						<td>Member Weight<br /> <input type="text"
+							th:field="*{weight}" /></td>
+					</tr>
+
+					<tr>
+						<td>Member Height<br /> <input type="text"
+							th:field="*{height}" /></td>
+
+						<td><input type="submit" value="Search"
+							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
+							th:href="@{/admin/addAttendance}" class="btn btn-primary">Add
+								Attendance</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+		<div align="center" class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr th:if="${attendances != null}">
+						<td class="font-weight-bold"><h3>ID</h3></td>
+						<td class="font-weight-bold"><h3>Member ID</h3></td>
+						<td class="font-weight-bold"><h3>Member Weight</h3></td>
+						<td class="font-weight-bold"><h3>Member Height</h3></td>
+						<td class="font-weight-bold"><h3>Attendance Date</h3></td>
+						<td class="font-weight-bold"><h3>Update Date</h3></td>
+						<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="attendance : ${attendances}">
+						<td th:utext="${attendance.attendanceId}">...</td>
+						<td th:utext="${attendance.memberId}">...</td>
+						<td th:utext="${attendance.weight}+' lb'"></td>
+						<td th:utext="${attendance.height}+' ft'"></td>
+						<td th:utext="${attendance.attendanceDate}">...</td>
+						<td th:utext="${attendance.updateDate}">...</td>
+						<td><a
+							th:href="@{/admin/updateAttendance/{id}(id=${attendance.attendanceId})}">Update</a></td>
+						<td><a
+							th:href="@{/admin/deleteAttendance/{id}(id=${attendance.attendanceId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

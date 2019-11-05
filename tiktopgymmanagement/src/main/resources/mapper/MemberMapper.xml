@@ -8,7 +8,7 @@
 		member(member_name,member_phone,member_address,member_email,create_date,enable,login,password,role)
 		VALUES
 		(#{member.memberName},#{member.memberPhone},#{member.memberAddress},#{member.memberEmail},CURDATE(),
-		#{member.enable},#{member.login},#{member.password},'ROLE_MEMBER')
+		#{member.enable},#{member.login},#{member.password},#{member.role})
 	</insert>
 
 	<update id="update">

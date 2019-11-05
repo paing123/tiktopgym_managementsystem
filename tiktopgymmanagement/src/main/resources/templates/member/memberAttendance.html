@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Customer List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/memberheader :: header"></div>
+	<h1 align="center">Member Attendance List</h1>
+	<br />
+	<div align="center">
+		<h3><a class="btn btn-primary" th:href="@{/member/bodycheck}">Check Body Measurement Analysis</a></h3>
+	</div>
+	<div align="center" class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<td class="font-weight-bold"><h3>Date</h3></td>
+					<td class="font-weight-bold"><h3>Height</h3></td>
+					<td class="font-weight-bold"><h3>Weight</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="attendance : ${attendances}">
+					<td th:utext="${attendance.attendanceDate}">...</td>
+					<td th:utext="${attendance.height}">...</td>
+					<td th:utext="${attendance.weight}">...</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div align="right">
+		<form th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
+</body>
+</html>

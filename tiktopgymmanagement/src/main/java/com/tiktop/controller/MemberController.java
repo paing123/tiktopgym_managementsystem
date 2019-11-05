@@ -5,38 +5,23 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.StringTrimmerEditor;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tiktop.model.Member;
 import com.tiktop.services.MemberService;
 
-@SessionAttributes("member")
 @Controller
 public class MemberController {
 	
 	@Autowired
 	private MemberService memberService;
-	
-	@Autowired
-	private BCryptPasswordEncoder enc;
-
-	// convert empty string to null when form is submit
-	@InitBinder
-	private void InitBinder(WebDataBinder binder) {
-		binder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
-	}
 
 	@RequestMapping(value = { "/admin/member" }, method = RequestMethod.GET)
 	public String member(Model model) {
@@ -63,8 +48,6 @@ public class MemberController {
 			memberLogin.setLogin(member.getLogin());
 			List<Member> members=memberService.findMember(memberLogin);
 			if (members.size()==0) {
-				member.setPassword(enc.encode(member.getPassword()));
-				member.setEnable(true);
 				memberService.save(member);
 				return "login";
 			}else {

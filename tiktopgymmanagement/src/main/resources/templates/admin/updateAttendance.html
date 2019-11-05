@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Update Attendance</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/adminheader :: header"></div>
+	<form th:action="@{/admin/updateAttendance}" th:object="${attendance}"
+		method="POST">
+		<input type="hidden" th:field="*{attendanceId}"/>
+		<table class="table table-bordered">
+			<tr>
+				<td colspan="2"><h1 align="center">Update a Attendance:</h1></td>
+			</tr>
+			<tr>
+				<td align="right">Member ID:</td>
+				<td><select th:field="*{memberId}">
+						<option th:value="0" th:text="--Select--"></option>
+						<option th:each="member : ${members}"
+							th:value="${member.memberId}" th:utext="${member.memberId}"></option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">Member Weight:</td>
+				<td><input type="text" th:field="*{weight}" /></td>
+			</tr>
+			<tr>
+				<td align="right">Member Height:</td>
+				<td><input type="text" th:field="*{height}" /></td>
+			</tr>
+			<tr>
+				<td align="right">Attendance Date:</td>
+				<td><input type="date" th:field="*{attendanceDate}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit"
+					value="Update" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>

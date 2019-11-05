@@ -15,5 +15,6 @@
 		<mapper resource="mapper/ScheduleMapper.xml" />
 		<mapper resource="mapper/BookingMapper.xml" />
 		<mapper resource="mapper/PaymentinfoMapper.xml" />
+		<mapper resource="mapper/AttendanceMapper.xml" />
 	</mappers>
 </configuration>
