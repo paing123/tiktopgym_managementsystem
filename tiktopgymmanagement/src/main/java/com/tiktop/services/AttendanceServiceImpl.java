@@ -27,7 +27,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 	public List<Attendance> findAttendance(Attendance attendance) {
 		return attendanceDao.findAttendance(attendance);
 	}
-	
+
 	@Override
 	public void delete(Integer id) {
 		attendanceDao.delete(id);
@@ -42,48 +42,43 @@ public class AttendanceServiceImpl implements AttendanceService {
 	public List<Attendance> checkAttendance(Attendance attendance) {
 		return attendanceDao.checkAttendance(attendance);
 	}
-	
+
 	@Override
 	public Attendance bodyMeasurementCheck(List<Attendance> attendances) {
 		Attendance startAtt = attendances.get(0);
-		Attendance endAtt = attendances.get(attendances.size()-1);
+		Attendance endAtt = attendances.get(attendances.size() - 1);
 		Double startHeight = startAtt.getHeight();
 		Double endHeight = endAtt.getHeight();
 		Double startWeight = startAtt.getWeight();
 		Double endWeight = endAtt.getWeight();
-		Double resultHeight = endHeight-startHeight;
-		Double resultWeight = endWeight-startWeight;
+		Double resultHeight = endHeight - startHeight;
+		Double resultWeight = endWeight - startWeight;
 		Attendance attendance = new Attendance();
-		attendance.setResultHeight(Math.round(resultHeight*100.0)/100.0);
-		attendance.setResultWeight(Math.round(resultWeight*100.0)/100.0);
+		attendance.setResultHeight(Math.round(resultHeight * 100.0) / 100.0);
+		attendance.setResultWeight(Math.round(resultWeight * 100.0) / 100.0);
 		return attendance;
 	}
-	
+
 	@Override
 	public ModelAndView checkLossGain(Attendance attendance) {
 		ModelAndView mav = new ModelAndView("member/memberbodycheck");
 		Double height = attendance.getResultHeight();
 		Double weight = attendance.getResultWeight();
-		
 		if (height > 0) {
-			mav.addObject("height","increaseHeight");
+			mav.addObject("height", "increaseHeight");
 		}
-		
 		else {
-			mav.addObject("height","decreaseHeight");
+			mav.addObject("height", "decreaseHeight");
 		}
-		
 		if (weight > 0) {
-			mav.addObject("weight","gainWeight");
+			mav.addObject("weight", "gainWeight");
 		}
-		
 		else {
-			mav.addObject("weight","lossWeight");
+			mav.addObject("weight", "lossWeight");
 		}
-		
-		attendance.setResultHeight(Math.abs(height));		
+		attendance.setResultHeight(Math.abs(height));
 		attendance.setResultWeight(Math.abs(weight));
-		mav.addObject("attendance",attendance);
+		mav.addObject("attendance", attendance);
 		return mav;
 	}
 
@@ -94,12 +89,12 @@ public class AttendanceServiceImpl implements AttendanceService {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date sDate = sdf.parse(startDate);
 		Date eDate = sdf.parse(endDate);
-		if (eDate.compareTo(sDate)>=0) {
+		if (eDate.compareTo(sDate) >= 0) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	@Override
 	public List<Attendance> findAttendanceMemberId(Attendance attendance) {
 		return attendanceDao.findAttendanceMemberId(attendance);

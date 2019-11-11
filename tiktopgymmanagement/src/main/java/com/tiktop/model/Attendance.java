@@ -3,16 +3,18 @@ package com.tiktop.model;
 import javax.validation.constraints.NotNull;
 
 public class Attendance {
-
+	
 	public Integer attendanceId;
+	@NotNull
 	public Double height;
+	@NotNull
 	public Double weight;
+	@NotNull
 	public String attendanceDate;
+	@NotNull
 	public Integer memberId;
 	public String updateDate;
-	@NotNull(message = "Start Date must not be null")
 	public String startDate;
-	@NotNull(message = "End Date must not be null")
 	public String endDate;
 	public Double resultHeight;
 	public Double resultWeight;

@@ -19,18 +19,22 @@
 				style="color: red;">
 				<h4>End date must be grater than or equal start date</h4>
 			</div>
+			<div th:if="${nulldate}=='nulldate'" align="center"
+				style="color: red;">
+				<h4>Start Date or End Date must not be null</h4>
+			</div>
+			<div th:if="${NoRecord}=='NoRecord'" align="center"
+				style="color: red;">
+				<h4>No Record is found in this period.</h4>
+			</div>
 			<table class="table table-striped">
 				<tbody>
 					<tr>
 						<td>Start Date<br /> <input type="date"
-							th:field="*{startDate}" /><br>
-							<div class="col-sm-10" th:if="${#fields.hasErrors('startDate')}"
-								th:errors="*{startDate}" th:style="${'color:red'}"></div></td>
+							th:field="*{startDate}" />
 						</td>
 
-						<td>End Date<br /> <input type="date" th:field="*{endDate}" /><br>
-							<div class="col-sm-10" th:if="${#fields.hasErrors('endDate')}"
-								th:errors="*{endDate}" th:style="${'color:red'}"></div></td>
+						<td>End Date<br /> <input type="date" th:field="*{endDate}" />
 						</td>
 					</tr>
 
@@ -46,35 +50,41 @@
 				<input class="btn btn-primary" type="submit" value="Logout" />
 			</form>
 		</div>
-		
+
 		<div th:object="${attendance}" align="center" style="color: red;">
 			<div th:if="${height}=='increaseHeight'">
 				Your height is
-				<h3 th:utext="${attendance.resultHeight}+' ft '"></h3>taller than normal.<br><br>
+				<h3 th:utext="${attendance.resultHeight}+' ft '"></h3>
+				taller than normal.<br> <br>
 				<div th:if="${weight}=='gainWeight'">
 					Your weight is increased
-				<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>than normal.<br>
+					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
+					than normal.<br>
 				</div>
 				<div th:unless="${weight}=='gainWeight'">
 					Your weight is loss
-				<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>than normal.<br><br>
+					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
+					than normal.<br> <br>
 				</div>
 			</div>
-			
+
 			<div th:unless="${height}=='increaseHeight'">
 				Your height is
-				<h3 th:utext="${attendance.resultHeight}+' ft '"></h3>shorter than normal.<br><br>
+				<h3 th:utext="${attendance.resultHeight}+' ft '"></h3>
+				shorter than normal.<br> <br>
 				<div th:if="${weight}=='gainWeight'">
 					Your weight is increased
-				<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>than normal.<br>
+					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
+					than normal.<br>
 				</div>
 				<div th:unless="${weight}=='gainWeight'">
 					Your weight is loss
-				<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>than normal.<br>
+					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
+					than normal.<br>
 				</div>
 			</div>
 		</div>
-	
+
 	</div>
 </body>
 </html>
