@@ -1141,3 +1141,1277 @@ java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 2019-11-12 00:25:52.472 DEBUG 8608 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
 2019-11-12 00:25:52.473 DEBUG 8608 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-01(String), 2019-11-12(String), 20(Integer)
 2019-11-12 00:25:52.475 DEBUG 8608 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 4
+2019-11-12 00:56:49.952  INFO 13100 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 13100 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 00:56:49.962  INFO 13100 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 00:56:52.861  INFO 13100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 00:56:52.863  INFO 13100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 00:56:53.017  INFO 13100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 00:56:55.446  INFO 13100 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 6.665 seconds (JVM running for 7.525)
+2019-11-12 00:56:55.636  INFO 13100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 00:56:56.659  WARN 13100 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2019-11-12 00:57:01.581  INFO 13100 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 00:57:01.863  INFO 13100 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 00:57:01.875 DEBUG 13100 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 00:57:01.903 DEBUG 13100 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 00:57:01.927 DEBUG 13100 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 00:57:03.472 DEBUG 13100 --- [http-nio-8080-exec-2] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 00:57:03.473 DEBUG 13100 --- [http-nio-8080-exec-2] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 00:57:03.479 DEBUG 13100 --- [http-nio-8080-exec-2] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 00:57:04.812 DEBUG 13100 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 00:57:04.813 DEBUG 13100 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 00:57:04.818 DEBUG 13100 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 00:57:40.582 DEBUG 13100 --- [http-nio-8080-exec-10] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 00:57:40.583 DEBUG 13100 --- [http-nio-8080-exec-10] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 00:57:40.591 DEBUG 13100 --- [http-nio-8080-exec-10] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 00:57:47.208 DEBUG 13100 --- [http-nio-8080-exec-3] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 00:57:47.209 DEBUG 13100 --- [http-nio-8080-exec-3] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 00:57:47.213 DEBUG 13100 --- [http-nio-8080-exec-3] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 00:57:49.753 DEBUG 13100 --- [http-nio-8080-exec-5] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 00:57:49.753 DEBUG 13100 --- [http-nio-8080-exec-5] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 00:57:49.756 DEBUG 13100 --- [http-nio-8080-exec-5] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 00:57:50.777 DEBUG 13100 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.schedule_time Like '%' ? '%' and s.schedule_day like '%' ? '%' order by s.create_date 
+2019-11-12 00:57:50.780 DEBUG 13100 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: (String), (String)
+2019-11-12 00:57:50.787 DEBUG 13100 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 12
+2019-11-12 00:57:50.791 DEBUG 13100 --- [http-nio-8080-exec-7] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 00:57:50.792 DEBUG 13100 --- [http-nio-8080-exec-7] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 00:57:50.798 DEBUG 13100 --- [http-nio-8080-exec-7] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 00:57:54.197 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE member_name Like '%' ? '%' and member_phone like '%' ? '%' and member_address like '%' ? '%' 
+2019-11-12 00:57:54.198 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: (String), (String), (String)
+2019-11-12 00:57:54.204 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 00:57:55.569 DEBUG 13100 --- [http-nio-8080-exec-9] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 00:57:55.570 DEBUG 13100 --- [http-nio-8080-exec-9] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 00:57:55.570 DEBUG 13100 --- [http-nio-8080-exec-9] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 00:59:04.804 DEBUG 13100 --- [http-nio-8080-exec-3] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 00:59:04.805 DEBUG 13100 --- [http-nio-8080-exec-3] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 00:59:04.806 DEBUG 13100 --- [http-nio-8080-exec-3] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 00:59:06.055 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 00:59:06.056 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 00:59:06.059 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 00:59:36.143 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 00:59:36.144 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 00:59:36.147 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 00:59:44.674 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 00:59:44.674 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 00:59:44.687 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 00:59:52.995 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 00:59:52.995 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 00:59:52.999 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:00:12.554 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:00:12.555 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:00:12.559 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:00:51.464 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:00:51.465 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:00:51.473 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:01:04.397 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:01:04.398 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:01:04.401 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:01:06.578 DEBUG 13100 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:01:06.581 DEBUG 13100 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:01:06.591 DEBUG 13100 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:01:06.749 DEBUG 13100 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:01:06.751 DEBUG 13100 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:01:06.754 DEBUG 13100 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:01:06.920 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:01:06.921 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:01:06.925 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:01:14.774 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:01:14.776 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:01:14.784 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:04:22.091 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:04:22.091 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:04:22.096 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:04:34.459 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:04:34.461 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:04:34.464 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:05:23.448 DEBUG 13100 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:05:23.448 DEBUG 13100 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:05:23.452 DEBUG 13100 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:05:35.786 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:05:35.786 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:05:35.789 DEBUG 13100 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:06:40.290 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:06:40.290 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:06:40.299 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:06:40.313 ERROR 13100 --- [http-nio-8080-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-4] Exception processing template "admin/addAttendance": An error happened during template parsing (template: "class path resource [templates/admin/addAttendance.html]" - line 15, col 43)
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/addAttendance.html]" - line 15, col 43)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:93) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:78) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_191]
+Caused by: org.attoparser.ParseException: (Line = 15, Column = 43) Malformed markup: Attribute "class" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:275) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 76 common frames omitted
+
+2019-11-12 01:06:40.316 ERROR 13100 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/addAttendance.html]" - line 15, col 43)] with root cause
+
+org.attoparser.ParseException: (Line = 15, Column = 43) Malformed markup: Attribute "class" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:275) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:93) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:78) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_191]
+
+2019-11-12 01:06:40.349  WARN 13100 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2019-11-12 01:07:16.376 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:07:16.376 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:07:16.378 DEBUG 13100 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:07:59.376 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:07:59.376 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:07:59.377 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:08:38.784 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:08:38.785 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:08:38.787 DEBUG 13100 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:09:15.357 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:09:15.357 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:09:15.359 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:10:39.403 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:10:39.403 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:10:39.406 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:10:55.465 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:10:55.466 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:10:55.472 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:11:27.459 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:11:27.460 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:11:27.473 DEBUG 13100 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:11:27.691  WARN 13100 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2019-11-12 01:12:16.555 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:12:16.556 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:12:16.562 DEBUG 13100 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:15:14.367 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:15:14.367 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:15:14.369 DEBUG 13100 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:15:29.443 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:15:29.443 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:15:29.446 DEBUG 13100 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:18:30.772  INFO 1012 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1012 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:18:30.776  INFO 1012 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:18:33.416  INFO 1012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:18:33.418  INFO 1012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:18:33.584  INFO 1012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:18:35.803  INFO 1012 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.695 seconds (JVM running for 6.246)
+2019-11-12 01:18:40.539  INFO 1012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:18:44.483  INFO 1012 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:18:44.793  INFO 1012 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:18:44.803 DEBUG 1012 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:18:44.836 DEBUG 1012 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-12 01:18:44.857 DEBUG 1012 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-12 01:18:45.085 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleByDate   : ==>  Preparing: SELECT DISTINCT create_date FROM schedule ORDER BY create_date 
+2019-11-12 01:18:45.085 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleByDate   : ==> Parameters: 
+2019-11-12 01:18:45.095 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleByDate   : <==      Total: 7
+2019-11-12 01:18:45.115 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.120 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-15(String)
+2019-11-12 01:18:45.125 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-12 01:18:45.128 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.128 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-16(String)
+2019-11-12 01:18:45.133 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-12 01:18:45.135 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.136 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-17(String)
+2019-11-12 01:18:45.144 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-12 01:18:45.146 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.146 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-18(String)
+2019-11-12 01:18:45.152 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 3
+2019-11-12 01:18:45.155 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.155 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-19(String)
+2019-11-12 01:18:45.161 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-12 01:18:45.163 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.163 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-20(String)
+2019-11-12 01:18:45.175 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-12 01:18:45.176 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:18:45.177 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-21(String)
+2019-11-12 01:18:45.183 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-12 01:18:50.043 DEBUG 1012 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:18:50.044 DEBUG 1012 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:18:50.045 DEBUG 1012 --- [http-nio-8080-exec-3] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:18:53.196 DEBUG 1012 --- [http-nio-8080-exec-8] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:18:53.198 DEBUG 1012 --- [http-nio-8080-exec-8] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:18:53.199 DEBUG 1012 --- [http-nio-8080-exec-8] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:18:54.821 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:18:54.821 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:18:54.827 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:19:07.341 DEBUG 1012 --- [http-nio-8080-exec-7] com.tiktop.mapper.AttendanceMapper.save  : ==>  Preparing: INSERT INTO attendance(height,weight,attendance_date,member_id) VALUES (?,?,?,?) 
+2019-11-12 01:19:07.344 DEBUG 1012 --- [http-nio-8080-exec-7] com.tiktop.mapper.AttendanceMapper.save  : ==> Parameters: 6.0(Double), 500.0(Double), 2019-11-12(String), 32(Integer)
+2019-11-12 01:19:07.347 DEBUG 1012 --- [http-nio-8080-exec-7] com.tiktop.mapper.AttendanceMapper.save  : <==    Updates: 1
+2019-11-12 01:19:07.350 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance 
+2019-11-12 01:19:07.351 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 
+2019-11-12 01:19:07.354 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 6
+2019-11-12 01:19:22.499 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:19:22.500 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: thut123(String)
+2019-11-12 01:19:22.501 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 0
+2019-11-12 01:19:22.507 ERROR 1012 --- [http-nio-8080-exec-10] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: Index: 0, Size: 0
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123) ~[spring-security-core-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144) ~[spring-security-core-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175) ~[spring-security-core-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200) ~[spring-security-core-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:93) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:78) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) [spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_191]
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source) ~[na:1.8.0_191]
+	at java.util.ArrayList.get(Unknown Source) ~[na:1.8.0_191]
+	at com.tiktop.services.MemberServiceImpl.findMemberByLogin(MemberServiceImpl.java:71) ~[classes/:na]
+	at com.tiktop.services.MemberServiceImpl.loadUserByUsername(MemberServiceImpl.java:56) ~[classes/:na]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108) ~[spring-security-core-5.2.0.M4.jar:5.2.0.M4]
+	... 46 common frames omitted
+
+2019-11-12 01:19:32.270 DEBUG 1012 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:19:32.272 DEBUG 1012 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: htut123(String)
+2019-11-12 01:19:32.274 DEBUG 1012 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:19:32.383 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleByDate   : ==>  Preparing: SELECT DISTINCT create_date FROM schedule ORDER BY create_date 
+2019-11-12 01:19:32.384 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleByDate   : ==> Parameters: 
+2019-11-12 01:19:32.387 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleByDate   : <==      Total: 7
+2019-11-12 01:19:32.390 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.390 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-15(String)
+2019-11-12 01:19:32.392 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-12 01:19:32.395 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.396 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-16(String)
+2019-11-12 01:19:32.400 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-12 01:19:32.401 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.402 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-17(String)
+2019-11-12 01:19:32.404 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-12 01:19:32.405 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.406 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-18(String)
+2019-11-12 01:19:32.409 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 3
+2019-11-12 01:19:32.410 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.412 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-19(String)
+2019-11-12 01:19:32.414 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-12 01:19:32.415 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.415 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-20(String)
+2019-11-12 01:19:32.418 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-12 01:19:32.419 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-12 01:19:32.420 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-10-21(String)
+2019-11-12 01:19:32.422 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-12 01:19:35.427 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:19:35.429 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: htut123(String)
+2019-11-12 01:19:35.431 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:19:35.432 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance WHERE member_id = ? 
+2019-11-12 01:19:35.432 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 32(Integer)
+2019-11-12 01:19:35.433 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 2
+2019-11-12 01:19:43.831 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:19:43.832 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: htut123(String)
+2019-11-12 01:19:43.833 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:19:43.836 DEBUG 1012 --- [http-nio-8080-exec-2] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-12 01:19:43.838 DEBUG 1012 --- [http-nio-8080-exec-2] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-03(String), 2019-11-04(String), 32(Integer)
+2019-11-12 01:19:43.838 DEBUG 1012 --- [http-nio-8080-exec-2] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 0
+2019-11-12 01:19:50.806 DEBUG 1012 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:19:50.808 DEBUG 1012 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: htut123(String)
+2019-11-12 01:19:50.809 DEBUG 1012 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:19:56.203 DEBUG 1012 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:19:56.204 DEBUG 1012 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: htut123(String)
+2019-11-12 01:19:56.205 DEBUG 1012 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:19:56.208 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-12 01:19:56.208 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-11(String), 2019-11-12(String), 32(Integer)
+2019-11-12 01:19:56.210 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 2
+2019-11-12 01:20:02.103 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:20:02.105 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: htut123(String)
+2019-11-12 01:20:02.106 DEBUG 1012 --- [http-nio-8080-exec-10] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:20:02.108 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-12 01:20:02.109 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-10(String), 2019-11-13(String), 32(Integer)
+2019-11-12 01:20:02.111 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 2
+2019-11-12 01:20:30.341 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:20:30.341 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:20:30.342 DEBUG 1012 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:20:33.419 DEBUG 1012 --- [http-nio-8080-exec-9] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:20:33.420 DEBUG 1012 --- [http-nio-8080-exec-9] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:20:33.422 DEBUG 1012 --- [http-nio-8080-exec-9] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:20:34.861 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:20:34.862 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:20:34.866 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:20:34.868 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance 
+2019-11-12 01:20:34.868 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 
+2019-11-12 01:20:34.873 DEBUG 1012 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 6
+2019-11-12 01:20:35.522 DEBUG 1012 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member 
+2019-11-12 01:20:35.523 DEBUG 1012 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: 
+2019-11-12 01:20:35.525 DEBUG 1012 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 12
+2019-11-12 01:21:36.559 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:21:36.561 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:21:36.562 DEBUG 1012 --- [http-nio-8080-exec-10] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:21:44.157 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:21:44.158 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:21:44.160 DEBUG 1012 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:21:48.570 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:21:48.572 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:21:48.574 DEBUG 1012 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:21:53.677 ERROR 1012 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+### The error may exist in mapper/PaymentinfoMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT * FROM paymentinfo   WHERE payment_partnername Like '%' ? '%'         payment_ac Like '%' ? '%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.3.1.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy64.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy78.findPaymentinfo(Unknown Source) ~[na:na]
+	at com.tiktop.dao.PaymentinfoDaoImpl.findPaymentinfo(PaymentinfoDaoImpl.java:22) ~[classes/:na]
+	at com.tiktop.dao.PaymentinfoDaoImpl$$FastClassBySpringCGLIB$$771b389c.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at com.tiktop.dao.PaymentinfoDaoImpl$$EnhancerBySpringCGLIB$$26812513.findPaymentinfo(<generated>) ~[classes/:na]
+	at com.tiktop.services.PaymentinfoServiceImpl.findPaymentinfo(PaymentinfoServiceImpl.java:24) ~[classes/:na]
+	at com.tiktop.controller.PaymentinfoController.SearchPaymentinfo(PaymentinfoController.java:77) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:887) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:93) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:78) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_191]
+
+2019-11-12 01:22:56.480  INFO 8284 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 8284 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:22:56.483  INFO 8284 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:22:58.781  INFO 8284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:22:58.782  INFO 8284 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:22:58.917  INFO 8284 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:23:01.287  INFO 8284 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.577 seconds (JVM running for 6.387)
+2019-11-12 01:23:01.413  INFO 8284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:23:06.691  INFO 8284 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:23:07.166  INFO 8284 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:23:07.180 DEBUG 8284 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:23:07.223 DEBUG 8284 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:23:07.249 DEBUG 8284 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:23:09.548 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer WHERE trainer_name Like '%' ? '%' and trainer_phone like '%' ? '%' 
+2019-11-12 01:23:09.551 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: (String), (String)
+2019-11-12 01:23:09.556 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:23:11.593 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer WHERE trainer_id = ? 
+2019-11-12 01:23:11.594 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 3(Integer)
+2019-11-12 01:23:11.596 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 1
+2019-11-12 01:23:12.935 DEBUG 8284 --- [http-nio-8080-exec-9] com.tiktop.mapper.TrainerMapper.update   : ==>  Preparing: update trainer set trainer_name=?,trainer_type=?, trainer_phone=?,trainer_address=?, trainer_description=?,update_date=CURDATE(), trainer_fees=? where trainer_id=? 
+2019-11-12 01:23:12.938 DEBUG 8284 --- [http-nio-8080-exec-9] com.tiktop.mapper.TrainerMapper.update   : ==> Parameters: John(String), Gym Trainer(String), 097960626545(String), Yangon(String), He is the good trainer and has the experience of 4 years.(String), 100000(Integer), 3(Integer)
+2019-11-12 01:23:12.940 DEBUG 8284 --- [http-nio-8080-exec-9] com.tiktop.mapper.TrainerMapper.update   : <==    Updates: 1
+2019-11-12 01:23:12.941 DEBUG 8284 --- [http-nio-8080-exec-9] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 01:23:12.943 DEBUG 8284 --- [http-nio-8080-exec-9] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 01:23:12.946 DEBUG 8284 --- [http-nio-8080-exec-9] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:23:14.183 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer WHERE trainer_id = ? 
+2019-11-12 01:23:14.184 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 3(Integer)
+2019-11-12 01:23:14.187 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 1
+2019-11-12 01:23:22.852 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 01:23:22.853 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 01:23:22.860 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:23:24.016 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.schedule_time Like '%' ? '%' and s.schedule_day like '%' ? '%' order by s.create_date 
+2019-11-12 01:23:24.017 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: (String), (String)
+2019-11-12 01:23:24.026 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 12
+2019-11-12 01:23:24.030 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 01:23:24.031 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 01:23:24.033 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:23:25.255 DEBUG 8284 --- [http-nio-8080-exec-1] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:23:25.257 DEBUG 8284 --- [http-nio-8080-exec-1] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:23:25.261 DEBUG 8284 --- [http-nio-8080-exec-1] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:23:26.211 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:23:26.213 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:23:26.213 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:23:26.215 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance 
+2019-11-12 01:23:26.215 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 
+2019-11-12 01:23:26.218 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 6
+2019-11-12 01:23:28.079 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.PackageMapper.findPackage     : ==>  Preparing: SELECT * FROM package WHERE package_name Like '%' ? '%' order by package_fees desc 
+2019-11-12 01:23:28.081 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.PackageMapper.findPackage     : ==> Parameters: (String)
+2019-11-12 01:23:28.085 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.mapper.PackageMapper.findPackage     : <==      Total: 4
+2019-11-12 01:23:30.192 ERROR 8284 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+### The error may exist in mapper/PaymentinfoMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT * FROM paymentinfo   WHERE payment_partnername Like '%' ? '%'         payment_ac Like '%' ? '%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.3.1.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy64.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy78.findPaymentinfo(Unknown Source) ~[na:na]
+	at com.tiktop.dao.PaymentinfoDaoImpl.findPaymentinfo(PaymentinfoDaoImpl.java:22) ~[classes/:na]
+	at com.tiktop.dao.PaymentinfoDaoImpl$$FastClassBySpringCGLIB$$771b389c.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at com.tiktop.dao.PaymentinfoDaoImpl$$EnhancerBySpringCGLIB$$900be67c.findPaymentinfo(<generated>) ~[classes/:na]
+	at com.tiktop.services.PaymentinfoServiceImpl.findPaymentinfo(PaymentinfoServiceImpl.java:24) ~[classes/:na]
+	at com.tiktop.controller.PaymentinfoController.SearchPaymentinfo(PaymentinfoController.java:77) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:887) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:93) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:78) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_191]
+
+2019-11-12 01:23:37.139 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:23:37.141 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:23:37.144 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:25:33.979 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:25:33.980 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:25:33.982 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:25:34.755 DEBUG 8284 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:25:34.757 DEBUG 8284 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: null(String)
+2019-11-12 01:25:34.759 DEBUG 8284 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:25:35.140 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:25:35.140 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: null(String)
+2019-11-12 01:25:35.144 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:25:35.448 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:25:35.448 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: null(String)
+2019-11-12 01:25:35.450 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:26:06.881 DEBUG 8284 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:26:06.882 DEBUG 8284 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: confirmed(String)
+2019-11-12 01:26:06.886 DEBUG 8284 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 2
+2019-11-12 01:26:09.592 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:26:09.594 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: pending(String)
+2019-11-12 01:26:09.609 DEBUG 8284 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 18
+2019-11-12 01:26:16.030 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:26:16.030 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:26:16.032 DEBUG 8284 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:26:31.826 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 01:26:31.827 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 01:26:31.830 DEBUG 8284 --- [http-nio-8080-exec-6] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:26:32.802 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.schedule_time Like '%' ? '%' and s.schedule_day like '%' ? '%' order by s.create_date 
+2019-11-12 01:26:32.803 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: (String), (String)
+2019-11-12 01:26:32.810 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 12
+2019-11-12 01:26:32.812 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 01:26:32.814 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 01:26:32.815 DEBUG 8284 --- [http-nio-8080-exec-10] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:27:09.266 DEBUG 8284 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.schedule_time Like '%' ? '%' and s.schedule_day like '%' ? '%' order by s.create_date 
+2019-11-12 01:27:09.266 DEBUG 8284 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: (String), (String)
+2019-11-12 01:27:09.272 DEBUG 8284 --- [http-nio-8080-exec-7] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 12
+2019-11-12 01:27:09.275 DEBUG 8284 --- [http-nio-8080-exec-7] c.t.mapper.TrainerMapper.findTrainer     : ==>  Preparing: SELECT * FROM trainer 
+2019-11-12 01:27:09.276 DEBUG 8284 --- [http-nio-8080-exec-7] c.t.mapper.TrainerMapper.findTrainer     : ==> Parameters: 
+2019-11-12 01:27:09.278 DEBUG 8284 --- [http-nio-8080-exec-7] c.t.mapper.TrainerMapper.findTrainer     : <==      Total: 5
+2019-11-12 01:27:12.123 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:27:12.125 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:27:12.126 DEBUG 8284 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:30:16.203  INFO 9976 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9976 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:30:16.212  INFO 9976 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:30:19.717  INFO 9976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:30:19.718  INFO 9976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:30:19.926  INFO 9976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:30:23.318  INFO 9976 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 8.448 seconds (JVM running for 10.133)
+2019-11-12 01:30:23.604  INFO 9976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:30:29.524  INFO 9976 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:30:30.141  INFO 9976 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:30:30.160 DEBUG 9976 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:30:30.232 DEBUG 9976 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:30:30.287 DEBUG 9976 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:30:42.394 DEBUG 9976 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:30:42.407 DEBUG 9976 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:30:42.441 DEBUG 9976 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:31:38.618  INFO 9752 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9752 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:31:38.622  INFO 9752 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:31:40.929  INFO 9752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:31:40.931  INFO 9752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:31:41.035  INFO 9752 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:31:43.305  INFO 9752 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.373 seconds (JVM running for 5.929)
+2019-11-12 01:31:54.821  INFO 9752 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9752 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:31:54.822  INFO 9752 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:31:55.575  WARN 9752 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:31:55.642  INFO 9752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:31:55.649  INFO 9752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:31:55.673  INFO 9752 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:31:56.314  INFO 9752 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.56 seconds (JVM running for 18.937)
+2019-11-12 01:31:56.583  INFO 9752 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:32:03.519  INFO 9752 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:32:03.867  INFO 9752 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:32:03.878 DEBUG 9752 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:32:03.912 DEBUG 9752 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:32:03.935 DEBUG 9752 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:32:07.072 DEBUG 9752 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:32:07.075 DEBUG 9752 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:32:07.078 DEBUG 9752 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:32:26.358  INFO 7244 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 7244 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:32:26.369  INFO 7244 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:32:30.319  INFO 7244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:32:30.320  INFO 7244 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:32:30.495  INFO 7244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:32:33.424  INFO 7244 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 8.245 seconds (JVM running for 9.55)
+2019-11-12 01:32:33.633  INFO 7244 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:32:38.249  INFO 7244 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:32:38.855  INFO 7244 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:32:38.873 DEBUG 7244 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:32:38.925 DEBUG 7244 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:32:38.969 DEBUG 7244 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:33:45.984  INFO 13384 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 13384 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:33:45.989  INFO 13384 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:33:48.371  INFO 13384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:33:48.372  INFO 13384 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:33:48.474  INFO 13384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:33:50.721  INFO 13384 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.42 seconds (JVM running for 6.005)
+2019-11-12 01:33:53.736  INFO 13384 --- [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:33:58.214  INFO 13384 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:33:58.564  INFO 13384 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:33:58.576 DEBUG 13384 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:33:58.615 DEBUG 13384 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:33:58.645 DEBUG 13384 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:34:01.689 DEBUG 13384 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:34:01.691 DEBUG 13384 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:34:01.694 DEBUG 13384 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:36:32.548  INFO 13504 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 13504 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:36:32.563  INFO 13504 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:36:35.197  INFO 13504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:36:35.198  INFO 13504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:36:35.381  INFO 13504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:36:38.127  INFO 13504 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 6.408 seconds (JVM running for 6.972)
+2019-11-12 01:36:38.271  INFO 13504 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:36:42.400  INFO 13504 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:36:42.840  INFO 13504 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:36:42.854 DEBUG 13504 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:36:42.901 DEBUG 13504 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:36:42.956 DEBUG 13504 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:36:47.450 DEBUG 13504 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:36:47.457 DEBUG 13504 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:36:47.459 DEBUG 13504 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:37:09.715  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 13740 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:37:09.722  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:37:12.325  INFO 13740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:37:12.327  INFO 13740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:37:12.455  INFO 13740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:37:14.719  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.628 seconds (JVM running for 6.264)
+2019-11-12 01:37:14.836  INFO 13740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:37:19.139  INFO 13740 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:37:19.482  INFO 13740 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:37:19.492 DEBUG 13740 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:37:19.524 DEBUG 13740 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:37:19.554 DEBUG 13740 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:37:24.765 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:37:24.768 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:37:24.771 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:37:30.961 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:37:30.962 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:37:30.964 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:38:36.870 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:38:36.873 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: confirmed(String)
+2019-11-12 01:38:36.880 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 2
+2019-11-12 01:38:39.711 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:38:39.712 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: pending(String)
+2019-11-12 01:38:39.729 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 18
+2019-11-12 01:38:46.295 DEBUG 13740 --- [http-nio-8080-exec-10] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:38:46.299 DEBUG 13740 --- [http-nio-8080-exec-10] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: confirmed(String)
+2019-11-12 01:38:46.304 DEBUG 13740 --- [http-nio-8080-exec-10] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 2
+2019-11-12 01:38:51.181 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:38:51.182 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: pending(String)
+2019-11-12 01:38:51.192 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 18
+2019-11-12 01:38:54.773 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:38:54.774 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:38:54.776 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:39:34.772  INFO 13740 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 01:39:34.784  INFO 13740 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 01:39:35.267  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 13740 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:39:35.268  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:39:36.171  WARN 13740 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:39:36.253  INFO 13740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:39:36.261  INFO 13740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:39:36.295  INFO 13740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:39:37.007  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.789 seconds (JVM running for 148.553)
+2019-11-12 01:39:37.055  INFO 13740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:39:37.089  INFO 13740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-11-12 01:39:37.108  INFO 13740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-11-12 01:39:37.108 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:39:37.109 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:39:37.110 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:39:38.347 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:39:38.349 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:39:38.351 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:39:51.057  INFO 13740 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-11-12 01:39:51.072  INFO 13740 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-11-12 01:39:51.494  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 13740 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:39:51.494  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:39:52.199  WARN 13740 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:39:52.281  INFO 13740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:39:52.282  INFO 13740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:39:52.305  INFO 13740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:39:53.020  INFO 13740 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.565 seconds (JVM running for 164.566)
+2019-11-12 01:39:53.220  INFO 13740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:39:53.254  INFO 13740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-11-12 01:39:53.261  INFO 13740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-11-12 01:39:53.261 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:39:53.262 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:39:53.264 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:39:54.453 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:39:54.459 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:39:54.461 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:39:55.594 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.A.findAttendanceMemberId           : ==>  Preparing: SELECT distinct member_id FROM attendance 
+2019-11-12 01:39:55.595 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.A.findAttendanceMemberId           : ==> Parameters: 
+2019-11-12 01:39:55.596 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.A.findAttendanceMemberId           : <==      Total: 2
+2019-11-12 01:39:55.599 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance 
+2019-11-12 01:39:55.600 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 
+2019-11-12 01:39:55.602 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 6
+2019-11-12 01:39:59.386 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:39:59.387 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:39:59.388 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:40:01.138 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findPackageBooking   : ==>  Preparing: SELECT * FROM booking b join package p on b.package_id = p.package_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:40:01.139 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findPackageBooking   : ==> Parameters: (String)
+2019-11-12 01:40:01.142 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findPackageBooking   : <==      Total: 0
+2019-11-12 01:40:05.991 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findPackageBooking   : ==>  Preparing: SELECT * FROM booking b join package p on b.package_id = p.package_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:40:05.993 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findPackageBooking   : ==> Parameters: confirmed(String)
+2019-11-12 01:40:05.997 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findPackageBooking   : <==      Total: 3
+2019-11-12 01:40:08.748 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findPackageBooking   : ==>  Preparing: SELECT * FROM booking b join package p on b.package_id = p.package_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:40:08.749 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findPackageBooking   : ==> Parameters: pending(String)
+2019-11-12 01:40:08.759 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findPackageBooking   : <==      Total: 13
+2019-11-12 01:41:20.997 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:20.998 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:21.000 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:22.177 DEBUG 13740 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:22.178 DEBUG 13740 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:22.179 DEBUG 13740 --- [http-nio-8080-exec-3] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:34.956 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:34.957 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:34.958 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:36.416 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:36.417 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:36.417 DEBUG 13740 --- [http-nio-8080-exec-6] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:37.304 DEBUG 13740 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:37.305 DEBUG 13740 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:37.307 DEBUG 13740 --- [http-nio-8080-exec-7] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:37.681 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:37.682 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:37.682 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:38.047 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:38.048 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:38.048 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:38.498 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:38.499 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:38.500 DEBUG 13740 --- [http-nio-8080-exec-5] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:52.848 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:52.849 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: all(String)
+2019-11-12 01:41:52.850 DEBUG 13740 --- [http-nio-8080-exec-4] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:41:54.548 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:41:54.549 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:41:54.549 DEBUG 13740 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:42:20.492 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:42:20.493 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:42:20.494 DEBUG 13740 --- [http-nio-8080-exec-9] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:42:22.805 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id WHERE b.status = ? 
+2019-11-12 01:42:22.806 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: (String)
+2019-11-12 01:42:22.807 DEBUG 13740 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 0
+2019-11-12 01:44:59.601  INFO 2128 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 2128 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:44:59.612  INFO 2128 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:45:04.028  INFO 2128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:45:04.030  INFO 2128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:45:04.205  INFO 2128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:45:07.769  INFO 2128 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 9.376 seconds (JVM running for 10.536)
+2019-11-12 01:45:08.070  INFO 2128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:45:15.965  INFO 2128 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:45:16.582  INFO 2128 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:45:16.598 DEBUG 2128 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:45:16.648 DEBUG 2128 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:45:16.674 DEBUG 2128 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:47:43.263  INFO 12512 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 12512 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:47:43.268  INFO 12512 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:47:46.036  INFO 12512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:47:46.038  INFO 12512 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:47:46.172  INFO 12512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:47:48.510  INFO 12512 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.994 seconds (JVM running for 6.566)
+2019-11-12 01:48:38.615  INFO 12512 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:48:46.721  INFO 12512 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:48:47.020  INFO 12512 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:48:47.031 DEBUG 12512 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-12 01:48:47.063 DEBUG 12512 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: admin(String)
+2019-11-12 01:48:47.099 DEBUG 12512 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 1
+2019-11-12 01:48:51.484 ERROR 12512 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+### The error may exist in mapper/PaymentinfoMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT * FROM paymentinfo   WHERE payment_partnername Like '%' ? '%'         payment_ac Like '%' ? '%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payment_ac Like '%' '' '%'' at line 5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.3.1.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.2.jar:3.5.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy62.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy76.findPaymentinfo(Unknown Source) ~[na:na]
+	at com.tiktop.dao.PaymentinfoDaoImpl.findPaymentinfo(PaymentinfoDaoImpl.java:22) ~[classes/:na]
+	at com.tiktop.dao.PaymentinfoDaoImpl$$FastClassBySpringCGLIB$$771b389c.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.0.RC1.jar:5.2.0.RC1]
+	at com.tiktop.dao.PaymentinfoDaoImpl$$EnhancerBySpringCGLIB$$f0f55025.findPaymentinfo(<generated>) ~[classes/:na]
+	at com.tiktop.services.PaymentinfoServiceImpl.findPaymentinfo(PaymentinfoServiceImpl.java:24) ~[classes/:na]
+	at com.tiktop.controller.PaymentinfoController.SearchPaymentinfo(PaymentinfoController.java:77) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:887) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.2.0.RC1.jar:5.2.0.RC1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:93) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:78) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.0.M4.jar:5.2.0.M4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_191]
+
+2019-11-12 01:49:42.985  INFO 12512 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 01:49:43.003  INFO 12512 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 01:49:43.649  INFO 12512 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 12512 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:49:43.649  INFO 12512 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:49:44.673  WARN 12512 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:49:44.756  INFO 12512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:49:44.758  INFO 12512 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:49:44.810  INFO 12512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:49:45.571  INFO 12512 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.981 seconds (JVM running for 123.627)
+2019-11-12 01:49:51.793  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1776 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:49:51.798  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:49:54.308  INFO 1776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:49:54.309  INFO 1776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:49:54.451  INFO 1776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:49:56.931  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 5.805 seconds (JVM running for 6.498)
+2019-11-12 01:49:57.099  INFO 1776 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 01:50:02.129  INFO 1776 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-12 01:50:02.701  INFO 1776 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-12 01:50:08.787 DEBUG 1776 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : ==>  Preparing: SELECT * FROM booking b join schedule s on b.schedule_id = s.schedule_id join member m on m.member_id = b.member_id 
+2019-11-12 01:50:08.800 DEBUG 1776 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : ==> Parameters: 
+2019-11-12 01:50:08.827 DEBUG 1776 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleBooking  : <==      Total: 20
+2019-11-12 01:50:13.075 DEBUG 1776 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findPackageBooking   : ==>  Preparing: SELECT * FROM booking b join package p on b.package_id = p.package_id join member m on m.member_id = b.member_id 
+2019-11-12 01:50:13.076 DEBUG 1776 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findPackageBooking   : ==> Parameters: 
+2019-11-12 01:50:13.090 DEBUG 1776 --- [http-nio-8080-exec-2] c.t.m.BookingMapper.findPackageBooking   : <==      Total: 16
+2019-11-12 01:50:35.647  INFO 1776 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-12 01:50:35.660  INFO 1776 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-12 01:50:36.091  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1776 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:50:36.092  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:50:36.943  WARN 1776 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:50:37.021  INFO 1776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:50:37.026  INFO 1776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:50:37.063  INFO 1776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:50:37.842  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.796 seconds (JVM running for 47.409)
+2019-11-12 01:50:41.891  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1776 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:50:41.891  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:50:42.656  WARN 1776 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:50:42.730  INFO 1776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:50:42.732  INFO 1776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:50:42.778  INFO 1776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:50:44.646  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 2.8 seconds (JVM running for 54.213)
+2019-11-12 01:50:50.776  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1776 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:50:50.779  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:50:51.545  WARN 1776 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:50:51.634  INFO 1776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:50:51.636  INFO 1776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:50:51.658  INFO 1776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:50:52.231  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.575 seconds (JVM running for 61.797)
+2019-11-12 01:50:58.478  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1776 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:50:58.478  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:50:59.604  WARN 1776 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:50:59.664  INFO 1776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:50:59.667  INFO 1776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:50:59.690  INFO 1776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:51:00.360  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.948 seconds (JVM running for 69.927)
+2019-11-12 01:51:05.467  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 1776 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-12 01:51:05.469  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-12 01:51:06.335  WARN 1776 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-12 01:51:06.431  INFO 1776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-12 01:51:06.433  INFO 1776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-12 01:51:06.455  INFO 1776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-12 01:51:07.003  INFO 1776 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.598 seconds (JVM running for 76.57)

@@ -10,50 +10,74 @@
 </head>
 <body>
 	<div th:replace="fragments/adminheader :: header"></div>
-	<form th:action="@{/admin/addAttendance}" th:object="${attendance}"
-		method="POST">
+	<div class="well well-lg">
+		<h2 align="center">Register Attendance</h2>
+		<form class="form-inline" th:action="@{/admin/addAttendance}"
+			th:object="${attendance}" method="POST">
+			<table align="center">
+				<tr>
+					<div class="form-group">
+						<td><label>Member Weight:</label></td>
+						<td><input type="text" class="form-control"
+							th:field="*{weight}" autofocus="autofocus"> lb
+							<div class="col-sm-10" th:if="${#fields.hasErrors('weight')}"
+								th:errors="*{weight}" th:style="${'color:red'}"></div></td>
+					</div>
+				</tr>
+				<tr>
+					<td><br></td>
+				</tr>
+				<tr>
+					<div class="form-group">
+					<td><label>Member Height:</label></td>
+					<td><input type="text" class="form-control"
+						th:field="*{height}"> ft
+						<div class="col-sm-10" th:if="${#fields.hasErrors('height')}"
+							th:errors="*{height}" th:style="${'color:red'}"></div></td>
+					</div>
+				</tr>
 
-		<table class="table table-striped">
-			<tr>
-				<td colspan="2"><h1 align="center">Register a Member
-						Attendance:</h1></td>
-			</tr>
-			<tr align="left">
-				<td align="right">Member Weight:</td>
-				<td><input type="text" th:field="*{weight}"
-					autofocus="autofocus" /> kg
-					<div class="col-sm-10" th:if="${#fields.hasErrors('weight')}"
-						th:errors="*{weight}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr align="left">
-				<td align="right">Member Height:</td>
-				<td><input type="text" th:field="*{height}" /> ft
-					<div class="col-sm-10" th:if="${#fields.hasErrors('height')}"
-						th:errors="*{height}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr align="left">
-				<td align="right">Attendance Date:</td>
-				<td><input type="date" th:field="*{attendanceDate}" /><br>
-					<div class="col-sm-10"
-						th:if="${#fields.hasErrors('attendanceDate')}"
-						th:errors="*{attendanceDate}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr align="left">
-				<td align="right">Member ID:</td>
-				<td><select th:field="*{memberId}">
-						<option th:value="null" th:text="--Select--"></option>
-						<option th:each="member : ${members}"
-							th:value="${member.memberId}" th:utext="${member.memberId}"></option>
-				</select><br>
-					<div class="col-sm-10" th:if="${#fields.hasErrors('memberId')}"
-						th:errors="*{memberId}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr align="left">
-			<td></td>
-				<td align="left"><input type="submit" value="Register" /></td>
-			</tr>
-		</table>
-	</form>
+				<tr>
+					<td><br></td>
+				</tr>
+				<tr>
+					<div class="form-group">
+					<td><label>Attendance Date:</label></td>
+					<td><input type="date" class="form-control"
+						th:field="*{attendanceDate}" style="width: 205px;">
+						<div class="col-sm-10"
+							th:if="${#fields.hasErrors('attendanceDate')}"
+							th:errors="*{attendanceDate}" th:style="${'color:red'}"></div></td>
+					</div>
+				</tr>
+
+				<tr>
+					<td><br></td>
+				</tr>
+				<tr>
+					<div class="form-group">
+						<td><label>Member ID:</label></td>
+						<td><select class="form-control" style="width: 205px;"
+							th:field="*{memberId}">
+								<option th:value="null" th:text="--Select--"></option>
+								<option th:each="member : ${members}"
+									th:value="${member.memberId}" th:utext="${member.memberId}"></option>
+						</select>
+							<div class="col-sm-10" th:if="${#fields.hasErrors('memberId')}"
+								th:errors="*{memberId}" th:style="${'color:red'}"></div></td>
+					</div>
+				</tr>
+				<tr>
+					<td><br></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="left"><input type="submit" value="Register"
+						class="btn btn-primary" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 	<br />
 </body>
 </html>

@@ -24,7 +24,7 @@
 							th:field="*{scheduleId}" /></td>
 					</tr>
 					<tr>
-						<td>Status<br /> <select class="form-control" th:field="*{status}" style="width: 185px;">
+						<td>Status<br /> <select class="form-control" style="width: 185px;" th:field="*{status}">
 								<option th:value="null" th:text="--Select--"></option>
 								<option th:value="confirmed" th:text="confirmed"></option>
 								<option th:value="pending" th:text="pending"></option>
