@@ -65,6 +65,25 @@
 		</where>
 	</select>
 	
+	<select id="findTrainerBooking" resultType="com.tiktop.model.Booking">
+		SELECT * FROM booking b join trainer t on b.trainer_id = t.trainer_id
+		join member m on m.member_id = b.member_id
+		<where>
+			<if test="booking.trainerId!=null">
+				b.trainer_id = #{booking.trainerId}
+			</if>
+			<if test="booking.status!=null">
+				and b.status = #{booking.status}
+			</if>
+			<if test="booking.login!=null">
+				and m.login = #{booking.login}
+			</if>
+			<if test="booking.createDate!=null">
+				and b.create_date = #{booking.createDate}
+			</if>
+		</where>
+	</select>
+	
 	<select id="findAllBooking" resultType="com.tiktop.model.Booking">
 		SELECT * FROM booking
 		<where>
@@ -79,21 +98,6 @@
 			</if>
 		</where>
 	</select>
-	
-	<!-- <select id="findMemberBooking" resultType="com.tiktop.model.Booking">
-		SELECT * FROM booking b join member m on b.member_id = m.member_id
-		<where>
-			<if test="booking.packageId!=null">
-				b.package_id = #{booking.packageId}
-			</if>
-			<if test="booking.scheduleId!=null">
-				b.schedule_id = #{booking.scheduleId}
-			</if>
-			<if test="booking.memberId!=null">
-				b.member_id = #{booking.memberId}
-			</if>
-		</where>
-	</select> -->
 	
 	<update id="confirmBooking">
 		update booking set

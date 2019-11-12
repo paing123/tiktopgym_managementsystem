@@ -43,8 +43,8 @@
 				<tr>
 					<div class="form-group">
 					<td><label>Attendance Date:</label></td>
-					<td><input type="date" class="form-control"
-						th:field="*{attendanceDate}" style="width: 205px;">
+					<td><input type="date" class="form-control" 
+						th:field="*{attendanceDate}" style="width: 205px;text-shadow: blue;text-align: center;">&nbsp;<label class="glyphicon glyphicon-calendar" style="font-size: 20px"></label>
 						<div class="col-sm-10"
 							th:if="${#fields.hasErrors('attendanceDate')}"
 							th:errors="*{attendanceDate}" th:style="${'color:red'}"></div></td>

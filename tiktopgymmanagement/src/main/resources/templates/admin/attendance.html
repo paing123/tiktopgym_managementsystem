@@ -19,7 +19,7 @@
 				<tbody>
 					<tr>
 						<td>Member ID<br />
-						<select th:field="*{memberId}">
+						<select th:field="*{memberId}" class="form-control" style="width: 155px;">
 								<option th:value="0" th:text="--Select--"></option>
 								<option th:each="attendance : ${attendanceMemberIds}"
 									th:value="${attendance.memberId}"
@@ -34,7 +34,7 @@
 						<td>Member Height<br /> <input type="text"
 							th:field="*{height}" /></td>
 
-						<td><input type="submit" value="Search"
+						<td><br><input type="submit" value="Search"
 							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
 							th:href="@{/admin/addAttendance}" class="btn btn-primary">Add
 								Attendance</a></td>

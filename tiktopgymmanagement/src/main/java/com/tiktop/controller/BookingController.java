@@ -80,7 +80,9 @@ public class BookingController {
 	}
 	
 	@RequestMapping(value = { "/bookingTrainer" }, method = RequestMethod.GET)
-	public String memberBookingTrainer(Model model) {
+	public String memberBookingTrainer(Model model,HttpSession session) {
+		String login = (String) session.getAttribute("currentUser");
+		model.addAttribute("login",login);
 		List<Trainer> trainers = trainerService.findTrainer(new Trainer());
 		model.addAttribute("trainers",trainers);
 		return "bookingTrainer";
@@ -126,6 +128,27 @@ public class BookingController {
 		return mav;
 	}
 	
+	@GetMapping("/member/trainerbookingdetail/{id}")
+	public ModelAndView trainerBookingDetail(@ModelAttribute("id") Integer id,HttpSession session) {
+		ModelAndView mav = new ModelAndView("member/trainerbookingdetail");
+		Trainer trainer = new Trainer();
+		trainer.setTrainerId(id);
+		List<Trainer> trainers=trainerService.findTrainer(trainer);
+		trainer = trainers.get(0);
+		LocalDate expiredDate = bookingService.checkExpiredDate(1);
+		mav.addObject("expiredDate",expiredDate);
+		mav.addObject("trainer", trainer);
+		String currentUser = (String)session.getAttribute("currentUser");
+		Member member = new Member();
+		member.setLogin(currentUser);
+		List<Member> members = memberService.findMember(member);
+		member = members.get(0);
+		mav.addObject("member",member);
+		Booking booking = new Booking();
+		mav.addObject("booking",booking);
+		return mav;
+	}
+	
 	@PostMapping("/member/savePackageBooking")
 	public ModelAndView confirmPackageBooking(@ModelAttribute("booking") Booking booking,HttpSession session){
 		Package pack = new Package();
@@ -156,6 +179,18 @@ public class BookingController {
 		return mav;
 	}
 	
+	@PostMapping("/member/saveTrainerBooking")
+	public ModelAndView confirmTrainerBooking(@ModelAttribute("booking") Booking booking,HttpSession session){
+		LocalDate expiredDate =  bookingService.checkExpiredDate(1);
+		booking.setExpiredDate(expiredDate.toString());
+		bookingService.save(booking);
+		List<Booking> bookings = bookingService.findAllBooking(new Booking());
+		int bookingId = bookings.get(bookings.size()-1).getBookingId();
+		session.setAttribute("bookingId",bookingId);
+		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
+		return mav;
+	}
+	
 	@GetMapping("/member/memberBookings")
 	public ModelAndView selectMemberBookings(HttpSession session) {
 		ModelAndView mav = new ModelAndView("member/memberBookings");
@@ -164,8 +199,10 @@ public class BookingController {
 		memberBooking.setLogin(login);
 		List<Booking> packageBookings = bookingService.findPackageBooking(memberBooking);
 		List<Booking> scheduleBookings = bookingService.findScheduleBooking(memberBooking);
+		List<Booking> trainerBookings = bookingService.findTrainerBooking(memberBooking);
 		mav.addObject("packageBookings",packageBookings);
 		mav.addObject("scheduleBookings",scheduleBookings);
+		mav.addObject("trainerBookings",trainerBookings);
 		return mav;
 	}
 	
@@ -237,9 +274,47 @@ public class BookingController {
 		booking.setBookingId(id);
 		bookingService.confirmBooking(booking);
 		List<Booking> bookings= bookingService.findPackageBooking(new Booking());
+		ModelAndView mav = new ModelAndView("admin/trainerBooking");
+		mav.addObject("bookings", bookings);
+		mav.addObject("booking",booking);
+		return mav;
+	}
+	
+	@RequestMapping(value = { "/admin/trainerBooking" }, method = RequestMethod.GET)
+	public String bookingTrainer(Model model) {
+		Booking booking = new Booking();
+		model.addAttribute("booking", booking);
+		return "admin/trainerBooking";
+	}
+	
+	@RequestMapping(value = { "/admin/searchTrainerBooking" }, method = RequestMethod.POST)
+	public String searchTrainerBooking(@ModelAttribute("booking") Booking booking, Model model) {
+		List<Booking> bookings = bookingService.findTrainerBooking(booking);
+		model.addAttribute("bookings", bookings);
+		return "admin/trainerBooking";
+	}
+	
+	@GetMapping("/admin/deleteTrainerBooking/{id}")
+	public ModelAndView deleteTrainerBooking(@ModelAttribute("id") Integer id) {
+		bookingService.delete(id);
+		ModelAndView mav = new ModelAndView("admin/trainerBooking");
+		Booking booking = new Booking();
+		List<Booking> bookings = bookingService.findTrainerBooking(booking);
+		mav.addObject("bookings",bookings);
+		mav.addObject("booking",booking);
+		return mav;
+	}
+	
+	@GetMapping("/admin/confirmTrainerBooking/{id}")
+	public ModelAndView confirmTrainerBooking(@ModelAttribute("id") int id) {
+		Booking booking = new Booking();
+		booking.setBookingId(id);
+		bookingService.confirmBooking(booking);
+		List<Booking> bookings= bookingService.findTrainerBooking(new Booking());
 		ModelAndView mav = new ModelAndView("admin/packageBooking");
 		mav.addObject("bookings", bookings);
 		mav.addObject("booking",booking);
 		return mav;
 	}
+	
 }

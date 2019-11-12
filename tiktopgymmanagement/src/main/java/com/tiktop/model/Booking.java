@@ -7,6 +7,7 @@ public class Booking {
 	public Integer packageId;
 	public Integer memberId;
 	public String memberName;
+	public String trainerName;
 	public String scheduleTime;
 	public String scheduleDay;
 	public String login;
@@ -117,5 +118,13 @@ public class Booking {
 
 	public void setScheduleDay(String scheduleDay) {
 		this.scheduleDay = scheduleDay;
+	}
+
+	public String getTrainerName() {
+		return trainerName;
+	}
+
+	public void setTrainerName(String trainerName) {
+		this.trainerName = trainerName;
 	}
 }

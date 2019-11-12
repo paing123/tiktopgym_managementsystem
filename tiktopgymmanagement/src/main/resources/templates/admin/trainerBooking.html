@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Trainer Booking List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<h1 align="center">Trainer Booking List</h1>
+	<br />
+	<div align="center" class="container">
+		<form data-th-action="@{/admin/searchTrainerBooking}"
+			th:object="${booking}" method="POST">
+			<table class="table table-striped">
+				<tbody>
+					<tr>
+						<td>Member Name<br /> <input type="text"
+							th:field="*{memberName}" /></td>
+						<td>Trainer Name<br /> <input type="text"
+							th:field="*{trainerName}" /></td>
+					</tr>
+					<tr>
+						<td>Status<br /> <select th:field="*{status}" class="form-control" style="width: 185px;">
+								<option th:value="null" th:text="--Select--"></option>
+								<option th:value="confirmed" th:text="confirmed"></option>
+								<option th:value="pending" th:text="pending"></option>
+						</select>
+						</td>
+
+						<td>
+						<br>	
+						<input type="submit" value="Search"
+							class="btn btn-primary"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<div align="right">
+		<form th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
+	<div align="center" class="container">
+		<table class="table table-striped">
+			<thead>
+
+				<tr th:if="${bookings != null}">
+					<td class="font-weight-bold"><h3>Booking ID</h3></td>
+					<td class="font-weight-bold"><h3>Trainer Name</h3></td>
+					<td class="font-weight-bold"><h3>Member</h3></td>
+					<td class="font-weight-bold"><h3>Status</h3></td>
+					<td class="font-weight-bold"><h3>Booking Date</h3></td>
+					<td colspan="2" align="center" class="font-weight-bold"><h3>Action</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="booking : ${bookings}">
+					<td th:utext="${booking.bookingId}">...</td>
+					<td th:utext="${booking.trainerName}">...</td>
+					<td th:utext="${booking.memberName}">...</td>
+					<td th:utext="${booking.status}">...</td>
+					<td th:utext="${booking.createDate}">...</td>
+					<td><a
+						th:href="@{/admin/confirmTrainerBooking/{id}(id=${booking.bookingId})}">Confirm</a></td>
+					<td><a
+						th:href="@{/admin/deleteTrainerBooking/{id}(id=${booking.bookingId})}">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

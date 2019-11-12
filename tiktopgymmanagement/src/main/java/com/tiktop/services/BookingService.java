@@ -17,6 +17,8 @@ public interface BookingService {
 	
 	List<Booking> findPackageBooking(Booking booking);
 	
+	List<Booking> findTrainerBooking(Booking booking);
+	
 	List<Booking> findAllBooking(Booking booking);
 	
 	void confirmBooking(Booking booking);

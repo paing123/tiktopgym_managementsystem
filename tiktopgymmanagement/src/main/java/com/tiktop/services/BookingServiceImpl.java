@@ -59,4 +59,9 @@ public class BookingServiceImpl implements BookingService {
 		LocalDate expDate = LocalDate.now().plusMonths(duration).minusDays(1);
 		return expDate;
 	}
+
+	@Override
+	public List<Booking> findTrainerBooking(Booking booking) {
+		return bookingDao.findTrainerBooking(booking);
+	}
 }

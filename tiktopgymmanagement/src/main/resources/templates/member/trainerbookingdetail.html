@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Schedule Booking Detail</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div th:replace="fragments/memberheader :: header"></div>
+	<h1 align="center">Trainer Booking Detail</h1>
+	<br />
+	<div align="center" class="container">
+		<form th:action="@{/member/saveTrainerBooking}" th:object="${booking}"
+			method="post">
+			<table class="table table-striped">
+				<tbody th:object="${trainer}">
+					<tr>
+						<th colspan="2"><h4>Trainer Detail Information</h4></th>
+					</tr>
+					<input type="hidden" th:field="*{trainerId}" />
+					<tr>
+						<td align="center" class="font-weight-bold">Trainer Name</td>
+						<td><label th:text="${trainer.trainerName}"></label></td>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Trainer Type</td>
+						<td><label th:text="${trainer.trainerType}"></label></td>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Expired Date</td>
+						<td><label th:text="${expiredDate}"></label></td>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Fees (MMK)</td>
+						<td><label th:text="${trainer.trainerFees}"></label></td>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Description</td>
+						<td><label th:text="${trainer.trainerDescription}"></label></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right"><input class="btn btn-primary"
+							type="submit" value="Confirm" /></td>
+					</tr>
+				</tbody>
+				<tbody th:object="${member}">
+
+					<input type="hidden" th:field="*{memberId}" />
+
+					<tr>
+						<th colspan="2"><h4>Member Detail Information</h4></th>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Member Name</td>
+						<td><label th:text="${member.memberName}"></label></td>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Email</td>
+						<td><label th:text="${member.memberEmail}"></label></td>
+					</tr>
+					<tr>
+						<td align="center" class="font-weight-bold">Login Name</td>
+						<td><label th:text="${member.login}"></label></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<div align="right">
+			<form th:action="@{/logout}" method="POST">
+				<input class="btn btn-primary" type="submit" value="Logout" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

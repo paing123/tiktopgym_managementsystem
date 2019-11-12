@@ -31,6 +31,11 @@ public class BookingDaoImpl implements BookingDao {
 		return bookings;
 	}
 	
+	public List<Booking> findTrainerBooking(Booking booking){
+		List<Booking> bookings = bookingMapper.findTrainerBooking(booking);
+		return bookings;
+	}
+	
 	public List<Booking> findAllBooking(Booking booking){
 		List<Booking> bookings = bookingMapper.findAllBooking(booking);
 		return bookings;

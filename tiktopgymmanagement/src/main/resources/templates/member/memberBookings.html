@@ -20,14 +20,16 @@
 					<td class="font-weight-bold"><h3>Package</h3></td>
 					<td class="font-weight-bold"><h3>Schedule Time</h3></td>
 					<td class="font-weight-bold"><h3>Schedule Day</h3></td>
+					<td class="font-weight-bold"><h3>Trainer Name</h3></td>
 					<td class="font-weight-bold"><h3>Booking Time</h3></td>
 					<td class="font-weight-bold"><h3>Status</h3></td>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="booking : ${packageBookings}">
+				<tr th:each="booking : ${packageBookings}" >
 					<td th:utext="${booking.bookingId}">...</td>
 					<td th:utext="${booking.packageName}">...</td>
+					<td>...</td>
 					<td>...</td>
 					<td>...</td>
 					<td th:utext="${booking.createDate}">...</td>
@@ -38,6 +40,16 @@
 					<td>...</td>
 					<td th:utext="${booking.scheduleTime}">...</td>
 					<td th:utext="${booking.scheduleDay}">...</td>
+					<td>...</td>
+					<td th:utext="${booking.createDate}">...</td>
+					<td th:utext="${booking.status}">...</td>
+				</tr>
+				<tr th:each="booking : ${trainerBookings}">
+					<td th:utext="${booking.bookingId}">...</td>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+					<td th:utext="${booking.trainerName}">...</td>
 					<td th:utext="${booking.createDate}">...</td>
 					<td th:utext="${booking.status}">...</td>
 				</tr>

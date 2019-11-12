@@ -20,6 +20,8 @@ public interface BookingMapper {
 
 	public List<Booking> findScheduleBooking(@Param("booking") Booking booking);
 	
+	public List<Booking> findTrainerBooking(@Param("booking") Booking booking);
+	
 	public List<Booking> findAllBooking(@Param("booking") Booking booking);
 
 	public void confirmBooking(@Param("booking") Booking booking);

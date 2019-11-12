@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8" />
+<title>Personal Trainer List</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
 <body>
-
+	<div th:if="${login != null}">
+		<div th:replace="fragments/memberheader :: header"></div>
+	</div>
+	<div th:if="${login == null}">
+		<div th:replace="fragments/header :: header"></div>
+	</div>
+	<h1 align="center">Trainer List for Personal Trainer Request</h1>
+	<div align="center" class="container">
+		<table class="table table-bordered">
+			<tbody>
+				<tr th:each="trainer : ${trainers}">
+					<td align="center" class="bg-success"><img width="300"
+						height="400" class="img-responsive"
+						style="border: 3px solid black"
+						th:src="@{/trainer-image/}+${trainer.trainerImageName}" />
+						Trainer Name :<label th:utext="${trainer.trainerName}"></label><br>
+						Trainer Type :<label th:utext="${trainer.trainerType}"></label><br>
+						<a class="btn btn-info"
+						th:href="@{/member/trainerbookingdetail/{id}(id=${trainer.trainerId})}">Booking</a>
+						<hr style="border-bottom: red;"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div align="right">
+		<form th:action="@{/logout}" method="POST">
+			<input class="btn btn-primary" type="submit" value="Logout" />
+		</form>
+	</div>
 </body>
 </html>
