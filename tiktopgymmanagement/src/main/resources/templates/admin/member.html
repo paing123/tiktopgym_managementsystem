@@ -13,6 +13,10 @@
 	<h1 align="center">Member List</h1>
 	<br />
 	<div align="center" class="container">
+	<div th:if="${error}">
+			<div class="alert alert-danger"
+				style="text-align: center; font-size: 20px">Member can't be deleted!</div>
+		</div>
 		<form data-th-action="@{/admin/searchMember}" th:object="${member}"
 			method="POST">
 			<table class="table table-striped">

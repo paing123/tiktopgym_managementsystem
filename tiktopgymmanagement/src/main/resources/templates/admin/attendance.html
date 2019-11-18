@@ -13,13 +13,22 @@
 	<h1 align="center">Attendance List</h1>
 	<br />
 	<div align="center" class="container">
+		<div th:if="${success}">
+			<div class="alert alert-info"
+				style="text-align: center; font-size: 20px">Attendance is
+				saved successfully!</div>
+		</div>
+		<div th:if="${error}">
+			<div class="alert alert-danger"
+				style="text-align: center; font-size: 20px">Attendance can't be deleted!</div>
+		</div>
 		<form data-th-action="@{/admin/searchAttendance}"
 			th:object="${attendance}" method="POST">
 			<table class="table table-striped">
 				<tbody>
 					<tr>
-						<td>Member ID<br />
-						<select th:field="*{memberId}" class="form-control" style="width: 155px;">
+						<td>Member ID<br /> <select th:field="*{memberId}"
+							class="form-control" style="width: 187px;">
 								<option th:value="0" th:text="--Select--"></option>
 								<option th:each="attendance : ${attendanceMemberIds}"
 									th:value="${attendance.memberId}"
@@ -34,7 +43,7 @@
 						<td>Member Height<br /> <input type="text"
 							th:field="*{height}" /></td>
 
-						<td><br><input type="submit" value="Search"
+						<td><br> <input type="submit" value="Search"
 							class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp; <a
 							th:href="@{/admin/addAttendance}" class="btn btn-primary">Add
 								Attendance</a></td>

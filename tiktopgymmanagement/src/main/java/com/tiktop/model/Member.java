@@ -24,7 +24,7 @@ public class Member{
 	@NotNull
 	public String memberAddress;
 	@NotNull
-	@Email
+	@Email(message = "Your email is not valid format!")
 	public String memberEmail;
 	public String createDate;
 	public String updateDate;

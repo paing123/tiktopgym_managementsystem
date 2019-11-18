@@ -57,9 +57,10 @@ public class MemberController {
 			List<Member> members=memberService.findMember(memberLogin);
 			if (members.size()==0) {
 				memberService.save(member);
+				model.addAttribute("success","success");
 				return "login";
 			}else {
-				model.addAttribute("error","Login name is already existed! Try another name");
+				model.addAttribute("error","error");
 				return "registerMember";
 			}
 		}else {
@@ -77,13 +78,18 @@ public class MemberController {
 
 	@GetMapping("/admin/deleteMember/{id}")
 	public ModelAndView deleteMember(@ModelAttribute("id") Integer id) {
-		memberService.delete(id);	
 		Member mem = new Member();
 		ModelAndView mav = new ModelAndView("admin/member");
 		List<Member> members = memberService.findMember(mem);
 		mav.addObject("members",members);
 		mav.addObject("member",mem);
-		return mav;
+		try {
+			memberService.delete(id);	
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/updateMember/{id}")

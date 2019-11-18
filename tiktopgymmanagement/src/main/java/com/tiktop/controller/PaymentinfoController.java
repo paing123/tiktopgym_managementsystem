@@ -77,6 +77,7 @@ public class PaymentinfoController {
 		List<Paymentinfo> paymentinfos= paymentinfoService.findPaymentinfo(paymentinfo1);
 		model.addAttribute("paymentinfos", paymentinfos);
 		model.addAttribute("paymentinfo",paymentinfo1);
+		model.addAttribute("success","success");
 		return "admin/paymentinfo";
 	}
 

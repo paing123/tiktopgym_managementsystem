@@ -13,6 +13,10 @@
 	<h1 align="center">Trainer Booking List</h1>
 	<br />
 	<div align="center" class="container">
+	<div th:if="${error}">
+			<div class="alert alert-danger"
+				style="text-align: center; font-size: 20px">Trainer booking can't be deleted!</div>
+		</div>
 		<form data-th-action="@{/admin/searchTrainerBooking}"
 			th:object="${booking}" method="POST">
 			<table class="table table-striped">

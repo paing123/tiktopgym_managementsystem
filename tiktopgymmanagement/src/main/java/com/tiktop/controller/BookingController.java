@@ -161,6 +161,7 @@ public class BookingController {
 		int bookingId = bookings.get(bookings.size()-1).getBookingId();
 		session.setAttribute("bookingId",bookingId);
 		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
+		mav.addObject("success","success");
 		return mav;
 	}
 	
@@ -176,6 +177,7 @@ public class BookingController {
 		int bookingId = bookings.get(bookings.size()-1).getBookingId();
 		session.setAttribute("bookingId",bookingId);
 		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
+		mav.addObject("success","success");
 		return mav;
 	}
 	
@@ -188,6 +190,7 @@ public class BookingController {
 		int bookingId = bookings.get(bookings.size()-1).getBookingId();
 		session.setAttribute("bookingId",bookingId);
 		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
+		mav.addObject("success","success");
 		return mav;
 	}
 	
@@ -222,13 +225,18 @@ public class BookingController {
 	
 	@GetMapping("/admin/deleteScheduleBooking/{id}")
 	public ModelAndView deleteScheduleBooking(@ModelAttribute("id") Integer id) {
-		bookingService.delete(id);
 		ModelAndView mav = new ModelAndView("admin/scheduleBooking");
 		Booking booking = new Booking();
 		List<Booking> bookings = bookingService.findScheduleBooking(booking);
 		mav.addObject("bookings",bookings);
 		mav.addObject("booking",booking);
-		return mav;
+		try {
+			bookingService.delete(id);
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/confirmScheduleBooking/{id}")
@@ -259,13 +267,18 @@ public class BookingController {
 	
 	@GetMapping("/admin/deletePackageBooking/{id}")
 	public ModelAndView deletePackageBooking(@ModelAttribute("id") Integer id) {
-		bookingService.delete(id);
 		ModelAndView mav = new ModelAndView("admin/packageBooking");
 		Booking booking = new Booking();
 		List<Booking> bookings = bookingService.findPackageBooking(booking);
 		mav.addObject("bookings",bookings);
 		mav.addObject("booking",booking);
-		return mav;
+		try {
+			bookingService.delete(id);
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/confirmPackageBooking/{id}")
@@ -274,7 +287,7 @@ public class BookingController {
 		booking.setBookingId(id);
 		bookingService.confirmBooking(booking);
 		List<Booking> bookings= bookingService.findPackageBooking(new Booking());
-		ModelAndView mav = new ModelAndView("admin/trainerBooking");
+		ModelAndView mav = new ModelAndView("admin/packageBooking");
 		mav.addObject("bookings", bookings);
 		mav.addObject("booking",booking);
 		return mav;
@@ -296,13 +309,18 @@ public class BookingController {
 	
 	@GetMapping("/admin/deleteTrainerBooking/{id}")
 	public ModelAndView deleteTrainerBooking(@ModelAttribute("id") Integer id) {
-		bookingService.delete(id);
 		ModelAndView mav = new ModelAndView("admin/trainerBooking");
 		Booking booking = new Booking();
 		List<Booking> bookings = bookingService.findTrainerBooking(booking);
 		mav.addObject("bookings",bookings);
 		mav.addObject("booking",booking);
-		return mav;
+		try {
+			bookingService.delete(id);
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/confirmTrainerBooking/{id}")

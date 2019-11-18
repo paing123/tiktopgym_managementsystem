@@ -57,6 +57,7 @@ public class TrainerController {
 		List<Trainer> trainers = trainerService.findTrainer(train);
 		model.addAttribute("trainers", trainers);
 		model.addAttribute("trainer", train);
+		model.addAttribute("success","success");
 		return "admin/trainer";
 	}
 
@@ -88,13 +89,18 @@ public class TrainerController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		trainerService.delete(id);
 		Trainer train = new Trainer();
 		ModelAndView mav = new ModelAndView("admin/trainer");
 		trainers = trainerService.findTrainer(train);
 		mav.addObject("trainers", trainers);
 		mav.addObject("trainer", train);
-		return mav;
+		try {
+			trainerService.delete(id);
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 
 	@GetMapping("/admin/updateTrainer/{id}")

@@ -75,6 +75,7 @@ public class ScheduleController {
 		List<Schedule> schedules = scheduleService.findSchedule(sche);
 		model.addAttribute("schedules", schedules);
 		model.addAttribute("schedule",sche);
+		model.addAttribute("success","success");
 		return "admin/schedule";
 	}
 
@@ -92,7 +93,6 @@ public class ScheduleController {
 
 	@GetMapping("/admin/deleteSchedule/{id}")
 	public ModelAndView deleteSchedule(@ModelAttribute("id") Integer id) {
-		scheduleService.delete(id);	
 		ModelAndView mav = new ModelAndView("admin/schedule");
 		Schedule schedule=new Schedule();
 		schedule.setTrainerId(0);
@@ -104,7 +104,13 @@ public class ScheduleController {
 		mav.addObject("trainers",trainers);
 		mav.addObject("schedules",schedules);
 		mav.addObject("schedule",new Schedule());
-		return mav;
+		try {
+			scheduleService.delete(id);	
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/updateSchedule/{id}")

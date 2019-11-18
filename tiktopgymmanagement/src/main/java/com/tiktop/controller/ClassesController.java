@@ -56,6 +56,7 @@ public class ClassesController {
 		List<Classes> classess = classesService.findClasses(classes1);
 		model.addAttribute("classess", classess);
 		model.addAttribute("classes",classes1);
+		model.addAttribute("success","success");
 		return "admin/classes";
 	}
 
@@ -69,13 +70,18 @@ public class ClassesController {
 
 	@GetMapping("/admin/deleteClasses/{id}")
 	public ModelAndView deleteClasses(@ModelAttribute("id") Integer id) {
-		classesService.delete(id);	
 		Classes classes= new Classes();
 		ModelAndView mav = new ModelAndView("admin/classes");
 		List<Classes> classess = classesService.findClasses(classes);
 		mav.addObject("classess",classess);
 		mav.addObject("classes",classes);
-		return mav;
+		try {
+			classesService.delete(id);
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/updateClasses/{id}")

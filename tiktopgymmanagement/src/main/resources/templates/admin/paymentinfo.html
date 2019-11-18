@@ -13,6 +13,11 @@
 	<h1 align="center">Payment Information List</h1>
 	<br />
 	<div align="center" class="container">
+	<div th:if="${success}">
+			<div class="alert alert-info"
+				style="text-align: center; font-size: 20px">Payment Info is
+				saved successfully!</div>
+		</div>
 		<form data-th-action="@{/admin/searchPaymentinfo}"
 			th:object="${paymentinfo}" method="POST">
 			<table class="table table-striped">

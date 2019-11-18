@@ -115,6 +115,7 @@ public class AttendanceController {
 		List<Attendance> attendances = attendanceService.findAttendance(attendance1);
 		model.addAttribute("attendances", attendances);
 		model.addAttribute("attendance", attendance1);
+		model.addAttribute("success","success");
 		return "admin/attendance";
 	}
 
@@ -129,14 +130,19 @@ public class AttendanceController {
 	}
 
 	@GetMapping("/admin/deleteAttendance/{id}")
-	public ModelAndView deleteAttendance(@ModelAttribute("id") Integer id) {
-		attendanceService.delete(id);
+	public ModelAndView deleteAttendance(@ModelAttribute("id") Integer id){
 		Attendance attendance = new Attendance();
 		ModelAndView mav = new ModelAndView("admin/attendance");
 		List<Attendance> attendances = attendanceService.findAttendance(attendance);
 		mav.addObject("attendances", attendances);
 		mav.addObject("attendance", attendance);
-		return mav;
+		try {
+			attendanceService.delete(id);
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 
 	@GetMapping("/admin/updateAttendance/{id}")

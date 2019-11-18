@@ -49,11 +49,15 @@ public class MyWebApplication extends WebSecurityConfigurerAdapter implements We
 		.addResourceHandler("/fonts/**", 
 							"/css/**", 
 							"/trainer-image/**", 
+							"/images/**", 
+							"/vendor/**", 
 							"/js/**")
 		.addResourceLocations("classpath:/META-INF/resources/webjars/",
 							  "classpath:/static/fonts/", 
 							  "classpath:/static/css/",
 							  "classpath:/static/trainer-image/", 
+							  "classpath:/static/images/", 
+							  "classpath:/static/vendor/", 
 							  "classpath:/static/js/");
 
 	}
@@ -67,7 +71,7 @@ public class MyWebApplication extends WebSecurityConfigurerAdapter implements We
     }
 
 	@Override
-	protected void configure(AuthenticationManagerBuilder auth) {
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.authenticationProvider(authenticationProvider());
 	}
 	

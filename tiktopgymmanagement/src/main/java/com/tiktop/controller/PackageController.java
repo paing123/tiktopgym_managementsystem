@@ -56,6 +56,7 @@ public class PackageController {
 		List<Package> packs = packageService.findPackage(pk);
 		model.addAttribute("packs", packs);
 		model.addAttribute("pack",pk);
+		model.addAttribute("success","success");
 		return "admin/package";
 	}
 
@@ -68,13 +69,18 @@ public class PackageController {
 
 	@GetMapping("/admin/deletePackage/{id}")
 	public ModelAndView deletePackage(@ModelAttribute("id") Integer id) {
-		packageService.delete(id);	
 		Package pack = new Package();
 		ModelAndView mav = new ModelAndView("admin/package");
 		List<Package> packs = packageService.findPackage(pack);
 		mav.addObject("packs",packs);
 		mav.addObject("pack",pack);
-		return mav;
+		try {
+			packageService.delete(id);	
+			return mav;
+		} catch (Exception e) {
+			mav.addObject("error","error");
+			return mav;
+		}
 	}
 	
 	@GetMapping("/admin/updatePackage/{id}")
