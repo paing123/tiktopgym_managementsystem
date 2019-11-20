@@ -8,24 +8,27 @@
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
-<body>
+<body
+	style="background: url('/images/gym_bg.jpg'); width: 100%; height: 100%">
 	<div th:replace="fragments/memberheader :: header"></div>
 	<h1 align="center">Body Measurement Checker</h1>
 	<br />
 	<div align="center" class="container">
 		<form data-th-action="@{/member/bodycheck}" th:object="${attendance}"
 			method="POST">
-			<div th:if="${invalidDate}=='invalidDate'" align="center"
-				style="color: red;">
-				<h4>End date must be grater than or equal start date</h4>
+			<div th:if="${invalidDate}">
+				<div class="alert alert-danger"
+					style="text-align: center; font-size: 20px">End date must be
+					grater than or equal start date</div>
 			</div>
-			<div th:if="${nulldate}=='nulldate'" align="center"
-				style="color: red;">
-				<h4>Start Date or End Date must not be null</h4>
+			<div th:if="${nulldate}">
+				<div class="alert alert-danger"
+					style="text-align: center; font-size: 20px">Start Date or End
+					Date must not be null</div>
 			</div>
-			<div th:if="${NoRecord}=='NoRecord'" align="center"
-				style="color: red;">
-				<h4>No Record is found in this period.</h4>
+			<div th:if="${NoRecord}">
+				<div class="alert alert-danger"
+					style="text-align: center; font-size: 20px">No Record is found in this period.</div>
 			</div>
 			<table class="table table-striped">
 				<tbody>

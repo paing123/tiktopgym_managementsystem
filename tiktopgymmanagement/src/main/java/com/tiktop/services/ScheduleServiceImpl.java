@@ -1,5 +1,7 @@
 package com.tiktop.services;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ public class ScheduleServiceImpl implements ScheduleService {
 
 	@Override
 	public void save(Schedule schedule) {
+		schedule = convertDateFormat(schedule);
 		scheduleDao.save(schedule);
 	}
 	
@@ -32,5 +35,18 @@ public class ScheduleServiceImpl implements ScheduleService {
 	@Override
 	public void update(Schedule schedule) {
 		scheduleDao.update(schedule);
+	}
+	
+	@Override
+	public Schedule convertDateFormat(Schedule schedule) {
+		String date = schedule.getScheduleDay();
+		String dates[]=date.split("/");
+		Collections.reverse(Arrays.asList(dates)); 
+		String newDate = "";
+		for (String str : dates) {
+			newDate=newDate+"-"+str;
+		}
+		schedule.setScheduleDay(newDate.substring(1));
+		return schedule;
 	}
 }

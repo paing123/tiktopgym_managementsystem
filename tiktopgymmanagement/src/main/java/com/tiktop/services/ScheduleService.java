@@ -13,4 +13,6 @@ public interface ScheduleService {
 	void delete(Integer id);
 
 	void update(Schedule schedule);
+	
+	Schedule convertDateFormat(Schedule schedule);
 }

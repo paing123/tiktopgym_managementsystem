@@ -1,20 +1,173 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Welcome to TikTop Gym</title>
+<title>Home Page</title>
+</head>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/bootstrap.min.css}" />
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
-</head>
-<body bgcolor="#E6E6FA">
+<body>
 	<div th:if="${login != null}">
 		<div th:replace="fragments/memberheader :: header"></div>
 	</div>
 	<div th:if="${login == null}">
 		<div th:replace="fragments/header :: header"></div>
 	</div>
-	<h1>Home Page</h1>
+
+	<div class="container-fluid">
+
+		<!---slider area--->
+		<div class="row">
+			<div class="col-md-12">
+				<div id="carousel-example-generic" class="carousel slide"
+					data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img width="100%" height="100%" alt="..."
+								th:src="@{/images/home1.jpg}" />
+						</div>
+						<div class="item">
+							<img width="100%" height="100%" alt="..."
+								th:src="@{/images/home2.jpg}" />
+						</div>
+						<div class="item">
+							<img width="100%" height="100%" alt="..."
+								th:src="@{/images/home3.jpg}" />
+						</div>
+						<div class="item">
+							<img width="100%" height="100%" alt="..."
+								th:src="@{/images/home4.jpg}" />
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic"
+						role="button" data-slide="prev"> <span
+						class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a> <a class="right carousel-control" href="#carousel-example-generic"
+						role="button" data-slide="next"> <span
+						class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!----slider area--->
+		<div class="row" style="margin-top: 40px;">
+			<div class="col-md-12">
+
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>
+								<span class="glyphicon glyphicon-tags"></span> Services
+							</h2>
+						</div>
+						<div class="panel panel-body">
+							<img width="430px" height="230px" alt="..."
+								th:src="@{/images/gym_equ1.jpg}" />
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>
+								<span class="glyphicon glyphicon-tags"></span> Services
+							</h2>
+						</div>
+						<div class="panel panel-body">
+							<img width="430px" height="230px" alt="..."
+								th:src="@{/images/gym_equ2.jpg}" />
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>
+								<span class="glyphicon glyphicon-tags"></span> Services
+							</h2>
+						</div>
+						<div class="panel panel-body">
+							<img width="430px" height="230px" alt="..."
+								th:src="@{/images/gym_equ3.jpg}" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<hr>
+		<!--footer--->
+		<div class="row bg-default">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-4">
+					<h3>Social Media</h3>
+					<ul class="list-group" style="list-style: none !important;">
+						<li>
+						<img th:src="@{/images/facebook.jpg}" width="30px" 
+							height="30px" alt="..."/>&nbsp&nbsp&nbsp&nbsp 
+							
+						<img th:src="@{/images/twitter.jpg}" width="30px" 
+							height="30px" alt="..."/>&nbsp&nbsp&nbsp&nbsp
+							
+						<img th:src="@{/images/instragram.jpg}" width="30px" 
+							height="30px" alt="..."/>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="col-md-4">
+					<h3>
+						<span class="glyphicon glyphicon-home"></span> Address
+					</h3>
+					<ul class="list-group" style="list-style: none !important;">
+						<li><p>No.33, Nandawun Street, SanChaung, Yangon</p></li>
+					</ul>
+				</div>
+
+
+				<div class="col-md-4">
+					<h3>Contact Us</h3>
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1"><span
+								class="glyphicon glyphicon-envelope"></span> Email address</label> <input
+								type="email" class="form-control" id="exampleInputEmail1"
+								placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Comment</label>
+							<textarea class="form-control">
+
+    </textarea>
+						</div>
+
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<hr>
+	</div>
+	<!---end con--->
 </body>
 </html>

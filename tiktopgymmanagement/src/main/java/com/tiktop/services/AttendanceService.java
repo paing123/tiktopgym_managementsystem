@@ -26,4 +26,6 @@ public interface AttendanceService {
 	ModelAndView checkLossGain(Attendance attendance);
 	
 	List<Attendance> findAttendanceMemberId(Attendance attendance);
+	
+	Attendance convertDateFormat(Attendance attendance);
 }

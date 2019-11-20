@@ -1,83 +1,110 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8" />
+<!-- Required meta tags-->
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Colorlib Templates">
+<meta name="author" content="Colorlib">
+<meta name="keywords" content="Colorlib Templates">
+
+<!-- Title Page-->
 <title>Add Attendance</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/bootstrap.min.css}" />
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+
+<!-- Icons font CSS-->
+<link
+	th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}"
+	rel="stylesheet" media="all">
+<link th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}"
+	rel="stylesheet" media="all">
+
+<!-- Font special for pages-->
+<link
+	th:href="@{/https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i}"
+	rel="stylesheet">
+
+<!-- Vendor CSS-->
+<link th:href="@{/vendor/select2/select2.min.css}" rel="stylesheet"
+	media="all">
+<link th:href="@{/vendor/datepicker/daterangepicker.css}"
+	rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link th:href="@{/css/main.css}" rel="stylesheet" media="all">
 </head>
+
 <body>
 	<div th:replace="fragments/adminheader :: header"></div>
-	<div class="well well-lg">
-		<h2 align="center">Register Attendance</h2>
-		<form class="form-inline" th:action="@{/admin/addAttendance}"
-			th:object="${attendance}" method="POST">
-			<table align="center">
-				<tr>
-					<div class="form-group">
-						<td><label>Member Weight:</label></td>
-						<td><input type="text" class="form-control"
-							th:field="*{weight}" autofocus="autofocus"> lb
+	<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+		<div class="wrapper wrapper--w780">
+			<div class="card card-3">
+				<div class="card-heading"></div>
+				<div class="card-body">
+					<h2 class="title">Add Attendance</h2>
+					<form class="form-inline" th:action="@{/admin/addAttendance}"
+						th:object="${attendance}" method="POST">
+						<div class="input-group">
+							<input class="input--style-3" type="text"
+								placeholder="Member Weight (lb)" th:field="*{weight}"
+								name="name"><br>
 							<div class="col-sm-10" th:if="${#fields.hasErrors('weight')}"
-								th:errors="*{weight}" th:style="${'color:red'}"></div></td>
-					</div>
-				</tr>
-				<tr>
-					<td><br></td>
-				</tr>
-				<tr>
-					<div class="form-group">
-					<td><label>Member Height:</label></td>
-					<td><input type="text" class="form-control"
-						th:field="*{height}"> ft
-						<div class="col-sm-10" th:if="${#fields.hasErrors('height')}"
-							th:errors="*{height}" th:style="${'color:red'}"></div></td>
-					</div>
-				</tr>
+								th:errors="*{weight}" th:style="${'color:red'}"></div>
+						</div>
 
-				<tr>
-					<td><br></td>
-				</tr>
-				<tr>
-					<div class="form-group">
-					<td><label>Attendance Date:</label></td>
-					<td><input type="date" class="form-control" 
-						th:field="*{attendanceDate}" style="width: 205px;text-shadow: blue;text-align: center;">&nbsp;<label class="glyphicon glyphicon-calendar" style="font-size: 20px"></label>
-						<div class="col-sm-10"
-							th:if="${#fields.hasErrors('attendanceDate')}"
-							th:errors="*{attendanceDate}" th:style="${'color:red'}"></div></td>
-					</div>
-				</tr>
+						<div class="input-group">
+							<input class="input--style-3" type="text"
+								placeholder="Member Height (ft)" th:field="*{height}"
+								name="name"><br>
+							<div class="col-sm-10" th:if="${#fields.hasErrors('height')}"
+								th:errors="*{height}" th:style="${'color:red'}"></div>
+						</div>
+						
+						 <div class="input-group">
+                            <input class="input--style-3 js-datepicker" type="text" th:field="*{attendanceDate}" placeholder="Attendance Date" name="birthday">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i><br>
+                            <div class="col-sm-10" th:if="${#fields.hasErrors('attendanceDate')}"
+								th:errors="*{attendanceDate}" th:style="${'color:red'}"></div>
+                        </div>
 
-				<tr>
-					<td><br></td>
-				</tr>
-				<tr>
-					<div class="form-group">
-						<td><label>Member ID:</label></td>
-						<td><select class="form-control" style="width: 205px;"
-							th:field="*{memberId}">
-								<option th:value="null" th:text="--Select--"></option>
+						<div class="input-group">
+							<select class="input--style-3"
+							th:field="*{memberId}" style="width: 165px">
+								<option th:value="null" th:text="Member-ID"></option>
 								<option th:each="member : ${members}"
 									th:value="${member.memberId}" th:utext="${member.memberId}"></option>
-						</select>
-							<div class="col-sm-10" th:if="${#fields.hasErrors('memberId')}"
-								th:errors="*{memberId}" th:style="${'color:red'}"></div></td>
-					</div>
-				</tr>
-				<tr>
-					<td><br></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td align="left"><input type="submit" value="Register"
-						class="btn btn-primary" /></td>
-				</tr>
-			</table>
-		</form>
+							</select>
+								<br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('memberId')}"
+								th:errors="*{memberId}" th:style="${'color:red'}"></div>
+						</div>
+
+						<div class="p-t-10">
+							<button class="btn btn--pill btn--green" type="submit">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	<br />
+
+	<!-- Jquery JS-->
+	<script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<!-- Vendor JS-->
+	<script type="text/javascript"
+		th:src="@{/vendor/select2/select2.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/vendor/datepicker/moment.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/vendor/datepicker/daterangepicker.js}"></script>
+
+	<!-- Main JS-->
+	<script type="text/javascript" th:src="@{/js/global.js}"></script>
 </body>
 </html>

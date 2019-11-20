@@ -2,6 +2,8 @@ package com.tiktop.services;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
 	@Override
 	public void save(Attendance attendance) {
+		attendance = convertDateFormat(attendance);
 		attendanceDao.save(attendance);
 	}
 
@@ -98,5 +101,18 @@ public class AttendanceServiceImpl implements AttendanceService {
 	@Override
 	public List<Attendance> findAttendanceMemberId(Attendance attendance) {
 		return attendanceDao.findAttendanceMemberId(attendance);
+	}
+
+	@Override
+	public Attendance convertDateFormat(Attendance attendance) {
+		String date = attendance.getAttendanceDate();
+		String dates[]=date.split("/");
+		Collections.reverse(Arrays.asList(dates)); 
+		String newDate = "";
+		for (String str : dates) {
+			newDate=newDate+"-"+str;
+		}
+		attendance.setAttendanceDate(newDate.substring(1));
+		return attendance;
 	}
 }

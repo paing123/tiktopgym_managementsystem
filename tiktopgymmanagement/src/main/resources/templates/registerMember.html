@@ -1,72 +1,118 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8" />
-<title>Member Register</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Colorlib Templates">
+<meta name="author" content="Colorlib">
+<meta name="keywords" content="Colorlib Templates">
+
+<!-- Title Page-->
+<title>Member Register Page</title>
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/bootstrap.min.css}" />
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+
+<!-- Icons font CSS-->
+<link
+	th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}"
+	rel="stylesheet" media="all">
+<link th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}"
+	rel="stylesheet" media="all">
+
+<!-- Font special for pages-->
+<link
+	th:href="@{/https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i}"
+	rel="stylesheet">
+
+<!-- Vendor CSS-->
+<link th:href="@{/vendor/select2/select2.min.css}" rel="stylesheet"
+	media="all">
+<link th:href="@{/vendor/datepicker/daterangepicker.css}"
+	rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link th:href="@{/css/main.css}" rel="stylesheet" media="all">
 </head>
+
 <body>
-	<div th:replace="fragments/header :: header"></div>
-	<form th:action="@{/registerMember}" th:object="${member}"
-		method="POST">
-		<div th:if="${error}">
-			<div class="alert alert-danger"
-				style="text-align: center; font-size: 20px">Login name is already existed! Try another name</div>
+<div th:replace="fragments/header :: header"></div>
+	<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">	
+		<div class="wrapper wrapper--w780">
+			<div class="card card-3">
+				<div class="card-heading"></div>
+				<div class="card-body">
+					<div th:if="${error}">
+						<div class="title" style="text-align: center; font-size: 20px; font-style: italic; color: red;">Login name is
+							already existed! Try another name!</div>
+					</div>
+					<h2 class="title">Member Registration</h2>
+					<form th:action="@{/registerMember}" th:object="${member}"
+						method="POST">
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Name"
+								th:field="*{memberName}" name="name"><br>
+							<div class="col-sm-10" th:if="${#fields.hasErrors('memberName')}"
+								th:errors="*{memberName}" th:style="${'color:red'}"></div>
+						</div>
+
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Phone"
+								th:field="*{memberPhone}" name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('memberPhone')}"
+								th:errors="*{memberPhone}" th:style="${'color:red'}"></div>
+						</div>
+
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Address"
+								th:field="*{memberAddress}" name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('memberAddress')}"
+								th:errors="*{memberAddress}" th:style="${'color:red'}"></div>
+						</div>
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Email"
+								th:field="*{memberEmail}" name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('memberEmail')}"
+								th:errors="*{memberEmail}" th:style="${'color:red'}"></div>
+						</div>
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Login"
+								th:field="*{login}" name="name"><br>
+							<div class="col-sm-10" th:if="${#fields.hasErrors('login')}"
+								th:errors="*{login}" th:style="${'color:red'}"></div>
+						</div>
+						<div class="input-group">
+							<input class="input--style-3" type="password" placeholder="Password"
+								th:field="*{password}" name="name"><br>
+							<div class="col-sm-10" th:if="${#fields.hasErrors('password')}"
+								th:errors="*{password}" th:style="${'color:red'}"></div>
+						</div>
+						<div class="p-t-10">
+							<button class="btn btn--pill btn--green" type="submit">Register</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-		<table class="table table-striped">
-			<tr>
-				<td></td>
-				<td><h1 align="left">Register a Member:</h1></td>
+	</div>
 
-			</tr>
-			<tr>
-				<td align="right">Member Name:</td>
-				<td><input type="text" th:field="*{memberName}"
-					autofocus="autofocus">
-					<div class="col-sm-10" th:if="${#fields.hasErrors('memberName')}"
-						th:errors="*{memberName}" th:style="${'color:red'}"></div></td>
+	<!-- Jquery JS-->
+	<script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<!-- Vendor JS-->
+	<script type="text/javascript"
+		th:src="@{/vendor/select2/select2.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/vendor/datepicker/moment.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/vendor/datepicker/daterangepicker.js}"></script>
 
-			</tr>
-			<tr>
-				<td align="right">Phone:</td>
-				<td><input type="text" th:field="*{memberPhone}">
-					<div class="col-sm-10" th:if="${#fields.hasErrors('memberPhone')}"
-						th:errors="*{memberPhone}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr>
-				<td align="right">Address:</td>
-				<td><input type="text" th:field="*{memberAddress}">
-					<div class="col-sm-10"
-						th:if="${#fields.hasErrors('memberAddress')}"
-						th:errors="*{memberAddress}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr>
-				<td align="right">Email:</td>
-				<td><input type="text" th:field="*{memberEmail}"><br>
-					<div class="col-sm-10" th:if="${#fields.hasErrors('memberEmail')}"
-						th:errors="*{memberEmail}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr>
-				<td align="right">Login Name:</td>
-				<td><input type="text" th:field="*{login}">
-					<div class="col-sm-10" th:if="${#fields.hasErrors('login')}"
-						th:errors="*{login}" th:style="${'color:red'}"></div></td>
-			</tr>
-			<tr>
-				<td align="right">Password:</td>
-				<td><input type="password" th:field="*{password}"></td>
-				<div class="col-sm-10" th:if="${#fields.hasErrors('password')}"
-					th:errors="*{password}" th:style="${'color:red'}"></div>
-			</tr>
-			<tr>
-				<td></td>
-				<td align="left"><input type="submit" value="Register" /></td>
-			</tr>
-		</table>
-	</form>
-	<br />
+	<!-- Main JS-->
+	<script type="text/javascript" th:src="@{/js/global.js}"></script>
 </body>
 </html>
