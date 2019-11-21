@@ -1,8 +1,11 @@
 package com.tiktop.model;
 
+import javax.validation.constraints.NotNull;
+
 public class Classes {
 
 	public Integer classesId;
+	@NotNull
 	public String classesName;
 	public String createDate;
 	public String updateDate;

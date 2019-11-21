@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Add Customer</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/adminheader :: header"></div>
+	<form th:action="@{/admin/addClasses}" th:object="${classes}" method="POST">
+
+		<table class="table table-striped">
+			<tr>
+				<td></td>
+				<td><h1 align="left">Register a Class:</h1></td>
+
+			</tr>
+			<tr>
+				<td align="right">Class Name:</td>
+				<td><input type="text" th:field="*{classesName}" autofocus="autofocus">
+				<div class="col-sm-10" th:if="${#fields.hasErrors('classesName')}"
+						th:errors="*{classesName}" th:style="${'color:red'}"></div>
+				</td>
+			<tr>
+				<td></td>
+				<td align="left"><input type="submit" value="Register" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+</body>
+</html>
