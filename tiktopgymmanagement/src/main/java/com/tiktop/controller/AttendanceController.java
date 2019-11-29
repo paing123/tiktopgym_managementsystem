@@ -58,13 +58,16 @@ public class AttendanceController {
 		List<Attendance> attendances = attendanceService.findAttendance(attendance);
 		ModelAndView mav = new ModelAndView("member/memberAttendance");
 		mav.addObject("attendances", attendances);
+		mav.addObject("login",login);
 		return mav;
 	}
 
 	@RequestMapping(value = { "/member/bodycheck" }, method = RequestMethod.GET)
-	public String checkbody(Model model) {
+	public String checkbody(Model model,HttpSession session) {
+		String login = (String)session.getAttribute("currentUser");
 		Attendance attendance = new Attendance();
 		model.addAttribute("attendance", attendance);
+		model.addAttribute("login",login);
 		return "member/memberbodycheck";
 	}
 
@@ -76,6 +79,7 @@ public class AttendanceController {
 		ModelAndView mav = new ModelAndView("member/memberbodycheck");
 		if (attendance.startDate == null | attendance.endDate == null) {
 			mav.addObject("nulldate", "nulldate");
+			mav.addObject("login",login);
 			return mav;
 		}
 		if (attendanceService.checkDate(attendance)) {
@@ -87,10 +91,12 @@ public class AttendanceController {
 				return mav;
 			} catch (Exception e) {
 				mav.addObject("NoRecord","NoRecord");
+				mav.addObject("login",login);
 				return mav;
 			}
 		}
 		mav.addObject("invalidDate", "invalidDate");
+		mav.addObject("login",login);
 		return mav;
 
 	}

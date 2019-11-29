@@ -37,6 +37,9 @@
 		<div th:replace="fragments/header :: header"></div>
 	</div>
 	<h1 align="center">Class Schedule List for Booking</h1>
+	<div th:if="${login != null}">
+		<h4 style="color:red;" align="right">You are logged in with <label th:utext="${login}"></label></h4>
+	</div>
 	<div align="right">
 		<form action="#" th:action="@{/logout}" method="POST">
 			<input class="btn btn-primary" type="submit" value="Logout" />

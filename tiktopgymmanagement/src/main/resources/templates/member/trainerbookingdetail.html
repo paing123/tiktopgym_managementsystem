@@ -11,6 +11,9 @@
 <body style="background: url('/images/gym_bg.jpg'); width: 100%;height: 100%">
 	<div th:replace="fragments/memberheader :: header"></div>
 	<h1 align="center">Trainer Booking Detail</h1>
+	<div th:if="${login != null}">
+		<h4 style="color:red;" align="right">You are logged in with <label th:utext="${login}"></label></h4>
+	</div>
 	<br />
 	<div align="center" class="container">
 		<form th:action="@{/member/saveTrainerBooking}" th:object="${booking}"

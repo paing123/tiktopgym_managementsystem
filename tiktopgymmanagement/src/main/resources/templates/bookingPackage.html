@@ -16,6 +16,9 @@
 		<div th:replace="fragments/header :: header"></div>
 	</div>
 	<h1 align="center">Package List for Booking</h1>
+	<div th:if="${login != null}">
+		<h4 style="color:red;" align="right">You are logged in with <label th:utext="${login}"></label></h4>
+	</div>
 	<br />
 	<div align="center" class="container">
 		<table class="table table-striped">

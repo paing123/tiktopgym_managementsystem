@@ -46,6 +46,7 @@ public class PaymentinfoController {
 	
 	@RequestMapping(value = {"/member/paymentinfo" }, method = RequestMethod.GET)
 	public String memberpaymentinfo(Model model,HttpSession session) {
+		String login = (String)session.getAttribute("currentUser");
 		Paymentinfo paymentinfo = new Paymentinfo();
 		List<Paymentinfo> paymentinfos = paymentinfoService.findPaymentinfo(paymentinfo);
 		model.addAttribute("paymentinfos", paymentinfos);
@@ -55,6 +56,7 @@ public class PaymentinfoController {
 		admin.setLogin("admin");
 		List<Member> members = memberServcie.findMember(admin);
 		admin = members.get(0);
+		model.addAttribute("login",login);
 		model.addAttribute("admin",admin);
 		return "member/memberPaymentinfo";
 	}

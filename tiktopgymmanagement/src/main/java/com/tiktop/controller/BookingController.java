@@ -104,6 +104,7 @@ public class BookingController {
 		mav.addObject("member",member);
 		Booking booking = new Booking();
 		mav.addObject("booking",booking);
+		mav.addObject("login",currentUser);
 		return mav;
 	}
 	
@@ -125,6 +126,7 @@ public class BookingController {
 		mav.addObject("member",member);
 		Booking booking = new Booking();
 		mav.addObject("booking",booking);
+		mav.addObject("login",currentUser);
 		return mav;
 	}
 	
@@ -146,11 +148,13 @@ public class BookingController {
 		mav.addObject("member",member);
 		Booking booking = new Booking();
 		mav.addObject("booking",booking);
+		mav.addObject("login",currentUser);
 		return mav;
 	}
 	
 	@PostMapping("/member/savePackageBooking")
 	public ModelAndView confirmPackageBooking(@ModelAttribute("booking") Booking booking,HttpSession session){
+		String login = (String) session.getAttribute("currentUser");
 		Package pack = new Package();
 		pack.setPackageId(booking.getPackageId());
 		List<Package> packs = packageService.findPackage(pack);
@@ -162,11 +166,13 @@ public class BookingController {
 		session.setAttribute("bookingId",bookingId);
 		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
 		mav.addObject("success","success");
+		mav.addObject("login",login);
 		return mav;
 	}
 	
 	@PostMapping("/member/saveScheduleBooking")
 	public ModelAndView confirmScheduleBooking(@ModelAttribute("booking") Booking booking,HttpSession session){
+		String login = (String) session.getAttribute("currentUser");
 		Schedule schedule = new Schedule();
 		schedule.setScheduleId(booking.getScheduleId());
 		List<Schedule> schedules = scheduleService.findSchedule(schedule);
@@ -178,11 +184,13 @@ public class BookingController {
 		session.setAttribute("bookingId",bookingId);
 		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
 		mav.addObject("success","success");
+		mav.addObject("login",login);
 		return mav;
 	}
 	
 	@PostMapping("/member/saveTrainerBooking")
 	public ModelAndView confirmTrainerBooking(@ModelAttribute("booking") Booking booking,HttpSession session){
+		String login = (String) session.getAttribute("currentUser");
 		LocalDate expiredDate =  bookingService.checkExpiredDate(1);
 		booking.setExpiredDate(expiredDate.toString());
 		bookingService.save(booking);
@@ -191,6 +199,7 @@ public class BookingController {
 		session.setAttribute("bookingId",bookingId);
 		ModelAndView mav = new ModelAndView("redirect:/member/paymentinfo");
 		mav.addObject("success","success");
+		mav.addObject("login",login);
 		return mav;
 	}
 	
@@ -206,6 +215,7 @@ public class BookingController {
 		mav.addObject("packageBookings",packageBookings);
 		mav.addObject("scheduleBookings",scheduleBookings);
 		mav.addObject("trainerBookings",trainerBookings);
+		mav.addObject("login",login);
 		return mav;
 	}
 	

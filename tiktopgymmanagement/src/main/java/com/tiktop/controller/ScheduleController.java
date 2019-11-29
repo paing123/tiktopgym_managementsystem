@@ -105,7 +105,8 @@ public class ScheduleController {
 		mav.addObject("schedules",schedules);
 		mav.addObject("schedule",new Schedule());
 		try {
-			scheduleService.delete(id);	
+			scheduleService.delete(id);
+			mav.addObject("delete","delete");
 			return mav;
 		} catch (Exception e) {
 			mav.addObject("error","error");
