@@ -59,34 +59,34 @@
 
 		<div th:object="${attendance}" align="center" style="color: red;">
 			<div th:if="${height}=='increaseHeight'">
-				Your height is
+				<h4>Your height is</h4>
 				<h3 th:utext="${attendance.resultHeight}+' ft '"></h3>
-				taller than normal.<br> <br>
+				<h4>taller than normal.</h4><br> <br>
 				<div th:if="${weight}=='gainWeight'">
-					Your weight is increased
+					<h4>Your weight is increased</h4>
 					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
-					than normal.<br>
+					<h4>than normal.</h4><br>
 				</div>
 				<div th:unless="${weight}=='gainWeight'">
-					Your weight is loss
+					<h4>Your weight is loss</h4>
 					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
-					than normal.<br> <br>
+					<h4>than normal.</h4><br><br>
 				</div>
 			</div>
 
 			<div th:unless="${height}=='increaseHeight'">
-				Your height is
+				<h4>Your height is</h4>
 				<h3 th:utext="${attendance.resultHeight}+' ft '"></h3>
-				shorter than normal.<br> <br>
+				<h4>shorter than normal.</h4><br> <br>
 				<div th:if="${weight}=='gainWeight'">
-					Your weight is increased
+					<h4>Your weight is increased</h4>
 					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
-					than normal.<br>
+					<h4>than normal.</h4><br>
 				</div>
 				<div th:unless="${weight}=='gainWeight'">
-					Your weight is loss
+					<h4>Your weight is loss</h4>
 					<h3 th:utext="${attendance.resultWeight}+' lb '"></h3>
-					than normal.<br>
+					<h4>than normal.</h4><br>
 				</div>
 			</div>
 		</div>
