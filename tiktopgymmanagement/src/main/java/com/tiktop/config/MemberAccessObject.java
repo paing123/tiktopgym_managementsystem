@@ -19,6 +19,6 @@ public class MemberAccessObject {
 		logger.info("Check for user access ");
 		logger.info("Allowed execution for {}",joinPoint);
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		logger.info("Allowed execution {}",auth);
+		logger.info(""+auth);
 	}
 }
