@@ -6,10 +6,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -48,7 +51,10 @@ public class TrainerController {
 	}
 
 	@RequestMapping(value = { "/admin/addTrainer" }, method = RequestMethod.POST)
-	public String saveTrainer(@ModelAttribute("trainer") Trainer trainer,Model model) {
+	public String saveTrainer(@Valid @ModelAttribute("trainer") Trainer trainer,BindingResult bindingResult,Model model) {
+		if (bindingResult.hasErrors()) {
+			return "admin/addTrainer";
+		}
 		MultipartFile file = trainer.getTrainerImage();
 		trainerService.store(file);
 		trainer.setTrainerImageName(file.getOriginalFilename());

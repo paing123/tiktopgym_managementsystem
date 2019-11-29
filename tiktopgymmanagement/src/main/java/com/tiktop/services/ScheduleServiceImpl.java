@@ -39,14 +39,14 @@ public class ScheduleServiceImpl implements ScheduleService {
 	
 	@Override
 	public Schedule convertDateFormat(Schedule schedule) {
-		String date = schedule.getScheduleDay();
+		String date = schedule.getCreateDate();
 		String dates[]=date.split("/");
 		Collections.reverse(Arrays.asList(dates)); 
 		String newDate = "";
 		for (String str : dates) {
 			newDate=newDate+"-"+str;
 		}
-		schedule.setScheduleDay(newDate.substring(1));
+		schedule.setCreateDate(newDate.substring(1));
 		return schedule;
 	}
 }

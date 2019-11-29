@@ -1,8 +1,12 @@
 package com.tiktop.model;
 
+import javax.validation.constraints.NotNull;
+
 public class Paymentinfo {
 	public Integer paymentinfoId;
+	@NotNull
 	public String paymentPartnerName;
+	@NotNull
 	public String paymentAc;
 	
 	public Integer getPaymentinfoId() {

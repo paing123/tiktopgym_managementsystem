@@ -1,20 +1,28 @@
 package com.tiktop.model;
 
+import javax.validation.constraints.NotNull;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 @Component
 public class Trainer {
 	public Integer trainerId;
+	@NotNull
 	public String trainerName;
+	@NotNull
 	public String trainerType;
 	public MultipartFile trainerImage;
 	public final String imagePath = "src/main/resources/static/trainer-image/";
+	@NotNull
 	public String trainerPhone;
+	@NotNull
 	public String trainerAddress;
 	public String createDate;
 	public String updateDate;
+	@NotNull
 	public String trainerDescription;
+	@NotNull
 	public Integer trainerFees;
 	public String trainerImageName;
  	

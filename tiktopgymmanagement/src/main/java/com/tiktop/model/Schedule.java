@@ -1,14 +1,22 @@
 package com.tiktop.model;
 
+import javax.validation.constraints.NotNull;
+
 public class Schedule {
 	public Integer scheduleId;
+	@NotNull
 	public String scheduleTime;
+	@NotNull
 	public String scheduleDay;
+	@NotNull
 	public Integer classesId;
 	public String classesName;
+	@NotNull
 	public Integer trainerId;
 	public String trainerName;
+	@NotNull
 	public String fees;
+	@NotNull
 	public String createDate;
 	public String updateDate;
 	

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags-->
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Colorlib Templates">
+<meta name="author" content="Colorlib">
+<meta name="keywords" content="Colorlib Templates">
+
+<!-- Title Page-->
+<title>Add Trainer</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+
+<!-- Icons font CSS-->
+<link
+	th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}"
+	rel="stylesheet" media="all">
+<link th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}"
+	rel="stylesheet" media="all">
+
+<!-- Font special for pages-->
+<link
+	th:href="@{/https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i}"
+	rel="stylesheet">
+
+<!-- Vendor CSS-->
+<link th:href="@{/vendor/select2/select2.min.css}" rel="stylesheet"
+	media="all">
+<link th:href="@{/vendor/datepicker/daterangepicker.css}"
+	rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link th:href="@{/css/main.css}" rel="stylesheet" media="all">
+</head>
+
+<body>
+	<div th:replace="fragments/adminheader :: header"></div>
+	<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+		<div class="wrapper wrapper--w780">
+			<div class="card card-3">
+				<div class="card-heading"></div>
+				<div class="card-body">
+					<h2 class="title">Add Trainer</h2>
+					<form th:action="@{/admin/addTrainer}" th:object="${trainer}"
+						enctype="multipart/form-data" method="POST">
+
+						<div class="input-group">
+							<input class="input--style-3" type="text"
+								placeholder="Trainer Name" th:field=*{trainerName} name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerName')}"
+								th:errors="*{trainerName}" th:style="${'color:red'}"></div>
+						</div>
+
+						<div class="input-group">
+							<input class="input--style-3" type="text"
+								placeholder="Trainer Type" th:field="*{trainerType}"
+								name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerType')}"
+								th:errors="*{trainerType}" th:style="${'color:red'}"></div>
+						</div>
+						
+						<div class="input-group">
+							<input class="input--style-3" type="file"
+								placeholder="Trainer Image" th:field="*{trainerImage}"
+								name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerImage')}"
+								th:errors="*{trainerImage}" th:style="${'color:red'}"></div>
+						</div>
+						
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Trainer Phone"
+								th:field="*{trainerPhone}" name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerPhone')}"
+								th:errors="*{trainerPhone}" th:style="${'color:red'}"></div>
+						</div>
+						
+						<div class="input-group">
+							<input class="input--style-3" type="text"
+								th:field="*{trainerAddress}" name="name" placeholder="Trainer Addresss"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerAddress')}"
+								th:errors="*{trainerAddress}" th:style="${'color:red'}"></div>
+						</div>
+						
+						<div class="input-group">
+							<input class="input--style-3" type="text" placeholder="Trainer Fees"
+								th:field="*{trainerFees}" name="name"><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerFees')}"
+								th:errors="*{trainerFees}" th:style="${'color:red'}"></div>
+						</div>
+						
+						<div class="input-group">
+							<textarea class="input--style-3" placeholder="Trainer Description"
+								th:field="*{trainerDescription}" name="name"></textarea><br>
+							<div class="col-sm-10"
+								th:if="${#fields.hasErrors('trainerDescription')}"
+								th:errors="*{trainerDescription}" th:style="${'color:red'}"></div>
+						</div>
+
+						<div class="p-t-10">
+							<button class="btn btn--pill btn--green" type="submit">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Jquery JS-->
+	<script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<!-- Vendor JS-->
+	<script type="text/javascript"
+		th:src="@{/vendor/select2/select2.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/vendor/datepicker/moment.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/vendor/datepicker/daterangepicker.js}"></script>
+
+	<!-- Main JS-->
+	<script type="text/javascript" th:src="@{/js/global.js}"></script>
+</body>
+</html>
