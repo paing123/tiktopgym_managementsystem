@@ -236,3 +236,834 @@ Caused by: java.lang.IllegalArgumentException: warning no match for this type na
 2019-11-29 20:41:45.639 DEBUG 4064 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
 2019-11-29 20:41:45.639  INFO 4064 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
 2019-11-29 20:41:45.639  INFO 4064 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 21:00:48.499  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:00:48.500  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 21:00:48.503 DEBUG 4064 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:00:48.509 DEBUG 4064 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:00:48.514 DEBUG 4064 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:00:48.516  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:00:48.516  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 21:00:48.516  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:00:48.516  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(List com.tiktop.services.AttendanceServiceImpl.checkAttendance(Attendance))
+2019-11-29 21:00:48.524 DEBUG 4064 --- [http-nio-8080-exec-9] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-29 21:00:48.525 DEBUG 4064 --- [http-nio-8080-exec-9] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-26(String), 2019-11-29(String), 20(Integer)
+2019-11-29 21:00:48.545 DEBUG 4064 --- [http-nio-8080-exec-9] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 0
+2019-11-29 21:00:48.545  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:00:48.546  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Attendance com.tiktop.services.AttendanceServiceImpl.bodyMeasurementCheck(List))
+2019-11-29 21:01:02.317  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:02.318  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 21:01:02.319 DEBUG 4064 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:01:02.320 DEBUG 4064 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:01:02.321 DEBUG 4064 --- [http-nio-8080-exec-4] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:01:02.321  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:02.321  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 21:01:02.322  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:02.322  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(List com.tiktop.services.AttendanceServiceImpl.checkAttendance(Attendance))
+2019-11-29 21:01:02.323 DEBUG 4064 --- [http-nio-8080-exec-4] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-29 21:01:02.323 DEBUG 4064 --- [http-nio-8080-exec-4] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-05(String), 2019-11-29(String), 20(Integer)
+2019-11-29 21:01:02.324 DEBUG 4064 --- [http-nio-8080-exec-4] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 1
+2019-11-29 21:01:02.324  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:02.325  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Attendance com.tiktop.services.AttendanceServiceImpl.bodyMeasurementCheck(List))
+2019-11-29 21:01:02.325  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:02.325  INFO 4064 --- [http-nio-8080-exec-4] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(ModelAndView com.tiktop.services.AttendanceServiceImpl.checkLossGain(Attendance))
+2019-11-29 21:01:11.794  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:11.795  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 21:01:11.796 DEBUG 4064 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:01:11.797 DEBUG 4064 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:01:11.799 DEBUG 4064 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:01:11.799  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:11.799  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 21:01:11.801  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:11.801  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(List com.tiktop.services.AttendanceServiceImpl.checkAttendance(Attendance))
+2019-11-29 21:01:11.802 DEBUG 4064 --- [http-nio-8080-exec-9] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-29 21:01:11.802 DEBUG 4064 --- [http-nio-8080-exec-9] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-01(String), 2019-11-05(String), 20(Integer)
+2019-11-29 21:01:11.805 DEBUG 4064 --- [http-nio-8080-exec-9] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 4
+2019-11-29 21:01:11.805  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:11.806  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(Attendance com.tiktop.services.AttendanceServiceImpl.bodyMeasurementCheck(List))
+2019-11-29 21:01:11.806  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Check for user access 
+2019-11-29 21:01:11.806  INFO 4064 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$dc9925b1 :  Allowed execution for execution(ModelAndView com.tiktop.services.AttendanceServiceImpl.checkLossGain(Attendance))
+2019-11-29 21:03:31.609  INFO 4064 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-11-29 21:03:31.627  INFO 4064 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-11-29 21:03:32.018  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:03:32.019  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:03:32.429  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:03:32.462  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:03:32.462  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:03:32.474  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:03:33.056  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.067 seconds (JVM running for 1735.309)
+2019-11-29 21:06:58.085  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:06:58.086  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:06:58.525  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:06:58.583  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:06:58.583  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:06:58.604  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:06:59.248  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.185 seconds (JVM running for 1941.5)
+2019-11-29 21:47:02.916  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:47:02.917  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:47:03.607  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:47:03.642  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:47:03.643  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:47:03.666  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:47:04.700  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.82 seconds (JVM running for 4346.953)
+2019-11-29 21:48:16.187  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:48:16.187  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:48:16.540  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:48:16.588  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:48:16.589  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:48:16.603  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:48:17.115  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.957 seconds (JVM running for 4419.368)
+2019-11-29 21:48:30.613  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:48:30.614  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:48:30.966  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:48:31.032  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:48:31.034  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:48:31.048  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:48:31.637  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.048 seconds (JVM running for 4433.889)
+2019-11-29 21:48:38.767  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:48:38.768  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:48:39.124  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:48:39.160  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:48:39.168  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:48:39.198  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:48:40.088  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.346 seconds (JVM running for 4442.341)
+2019-11-29 21:48:44.139  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 4064 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:48:44.140  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:48:44.607  WARN 4064 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:48:44.662  INFO 4064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:48:44.662  INFO 4064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:48:44.677  INFO 4064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:48:45.348  INFO 4064 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.267 seconds (JVM running for 4447.6)
+2019-11-29 21:48:52.155  INFO 4064 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 21:48:55.631  INFO 4064 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-11-29 21:48:55.637  INFO 4064 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-11-29 21:48:55.638 DEBUG 4064 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:48:55.638 DEBUG 4064 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:48:55.642 DEBUG 4064 --- [http-nio-8080-exec-7] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:48:55.643  INFO 4064 --- [http-nio-8080-exec-7] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.643  INFO 4064 --- [http-nio-8080-exec-7] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(UserDetails com.tiktop.services.MemberServiceImpl.loadUserByUsername(String))
+2019-11-29 21:48:55.788 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleByDate   : ==>  Preparing: SELECT DISTINCT create_date FROM schedule ORDER BY create_date 
+2019-11-29 21:48:55.789 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleByDate   : ==> Parameters: 
+2019-11-29 21:48:55.793 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleByDate   : <==      Total: 7
+2019-11-29 21:48:55.793  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.793  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.BookingServiceImpl.findScheduleByDate(Schedule))
+2019-11-29 21:48:55.809 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.810 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-21(String)
+2019-11-29 21:48:55.813 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:48:55.813  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.814  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:48:55.815 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.816 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-22(String)
+2019-11-29 21:48:55.818 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-29 21:48:55.818  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.818  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:48:55.819 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.819 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-23(String)
+2019-11-29 21:48:55.822 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:48:55.822  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.822  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:48:55.823 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.823 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-24(String)
+2019-11-29 21:48:55.824 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:48:55.825  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.825  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:48:55.826 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.826 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-25(String)
+2019-11-29 21:48:55.827 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:48:55.828  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.828  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:48:55.828 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.829 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-26(String)
+2019-11-29 21:48:55.830 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-29 21:48:55.831  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.831  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:48:55.831 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:48:55.831 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-27(String)
+2019-11-29 21:48:55.833 DEBUG 4064 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:48:55.833  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:48:55.833  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:49:09.926 DEBUG 4064 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:49:09.928 DEBUG 4064 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:49:09.930 DEBUG 4064 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:49:09.931  INFO 4064 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:49:09.931  INFO 4064 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 21:49:09.952 DEBUG 4064 --- [http-nio-8080-exec-6] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance WHERE member_id = ? 
+2019-11-29 21:49:09.952 DEBUG 4064 --- [http-nio-8080-exec-6] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 20(Integer)
+2019-11-29 21:49:09.954 DEBUG 4064 --- [http-nio-8080-exec-6] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 4
+2019-11-29 21:49:09.954  INFO 4064 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:49:09.955  INFO 4064 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(List com.tiktop.services.AttendanceServiceImpl.findAttendance(Attendance))
+2019-11-29 21:49:18.631 DEBUG 4064 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:49:18.632 DEBUG 4064 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:49:18.633 DEBUG 4064 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:49:18.634  INFO 4064 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:49:18.634  INFO 4064 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 21:49:27.867 DEBUG 4064 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:49:27.869 DEBUG 4064 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:49:27.872 DEBUG 4064 --- [http-nio-8080-exec-8] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:49:27.872  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:49:27.872  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 21:49:27.873  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Check for user access 
+2019-11-29 21:49:27.874  INFO 4064 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$dc9925b1 : Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 21:49:47.236  INFO 11164 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 11164 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:49:47.247  INFO 11164 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:49:52.820  INFO 11164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:49:52.822  INFO 11164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:49:53.014  INFO 11164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:49:56.692  INFO 11164 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 10.561 seconds (JVM running for 12.366)
+2019-11-29 21:49:57.027  INFO 11164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 21:50:04.066  INFO 11164 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-29 21:50:04.535  INFO 11164 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-29 21:50:04.549 DEBUG 11164 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:50:04.593 DEBUG 11164 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:50:04.639 DEBUG 11164 --- [http-nio-8080-exec-9] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:50:12.136  INFO 11164 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$deae9d2d : Check for user access 
+2019-11-29 21:50:30.517  INFO 11164 --- [http-nio-8080-exec-9] sObject$$EnhancerBySpringCGLIB$$deae9d2d : Allowed execution for execution(UserDetails com.tiktop.services.MemberServiceImpl.loadUserByUsername(String))
+2019-11-29 21:51:44.268  INFO 11164 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-29 21:51:44.280  INFO 11164 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-29 21:51:49.948  INFO 8716 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 8716 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:51:49.957  INFO 8716 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:51:54.035  INFO 8716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:51:54.037  INFO 8716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:51:54.466  INFO 8716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:51:58.901  INFO 8716 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 10.423 seconds (JVM running for 12.117)
+2019-11-29 21:51:59.139  INFO 8716 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 21:52:04.423  INFO 8716 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-29 21:52:04.872  INFO 8716 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-29 21:52:04.883 DEBUG 8716 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:52:04.921 DEBUG 8716 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:52:04.948 DEBUG 8716 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:52:08.476  INFO 8716 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$16a72adf : Check for user access 
+2019-11-29 21:52:51.996  INFO 8716 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-29 21:52:52.007  INFO 8716 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-29 21:53:09.224  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:53:09.229  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:53:12.441  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:53:12.443  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:53:12.614  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:53:15.117  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 6.57 seconds (JVM running for 7.09)
+2019-11-29 21:53:15.260  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 21:53:19.252  INFO 9408 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-29 21:53:19.619  INFO 9408 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-29 21:53:19.629 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 21:53:19.661 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 21:53:19.690 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 21:53:19.697  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.697  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(UserDetails com.tiktop.services.MemberServiceImpl.loadUserByUsername(String))
+2019-11-29 21:53:19.699  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.896 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleByDate   : ==>  Preparing: SELECT DISTINCT create_date FROM schedule ORDER BY create_date 
+2019-11-29 21:53:19.899 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleByDate   : ==> Parameters: 
+2019-11-29 21:53:19.902 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.m.BookingMapper.findScheduleByDate   : <==      Total: 7
+2019-11-29 21:53:19.903  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.903  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.BookingServiceImpl.findScheduleByDate(Schedule))
+2019-11-29 21:53:19.905  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.927 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.928 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-21(String)
+2019-11-29 21:53:19.932 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:53:19.935  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.935  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.935  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.936 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.936 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-22(String)
+2019-11-29 21:53:19.942 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-29 21:53:19.942  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.943  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.944  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.945 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.946 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-23(String)
+2019-11-29 21:53:19.949 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:53:19.949  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.949  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.949  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.950 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.951 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-24(String)
+2019-11-29 21:53:19.953 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:53:19.957  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.958  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.958  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.959 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.960 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-25(String)
+2019-11-29 21:53:19.965 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:53:19.965  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.966  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.966  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.967 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.968 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-26(String)
+2019-11-29 21:53:19.979 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-29 21:53:19.979  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.980  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.981  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:19.982 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:53:19.982 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-27(String)
+2019-11-29 21:53:19.985 DEBUG 9408 --- [http-nio-8080-exec-8] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:53:19.990  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:53:19.991  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.ScheduleServiceImpl.findSchedule(Schedule))
+2019-11-29 21:53:19.991  INFO 9408 --- [http-nio-8080-exec-8] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Log in with
+2019-11-29 21:53:39.952  INFO 9408 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-29 21:53:39.967  INFO 9408 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-29 21:53:40.408  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:53:40.409  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:53:40.962  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:53:41.017  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:53:41.018  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:53:41.034  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:53:41.904  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.543 seconds (JVM running for 33.876)
+2019-11-29 21:57:05.509  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:57:05.510  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:57:06.258  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:57:06.316  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:57:06.318  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:57:06.350  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:57:07.741  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 2.279 seconds (JVM running for 239.713)
+2019-11-29 21:57:40.686  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:57:40.687  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:57:41.281  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:57:41.338  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:57:41.339  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:57:41.358  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:57:42.277  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.627 seconds (JVM running for 274.249)
+2019-11-29 21:57:50.808  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:57:50.808  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:57:51.766  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:57:51.825  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:57:51.827  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:57:51.846  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:57:52.939  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 2.18 seconds (JVM running for 284.911)
+2019-11-29 21:58:11.643  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:58:11.645  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:58:12.263  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:58:12.327  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:58:12.327  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:58:12.343  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:58:13.170  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.566 seconds (JVM running for 305.142)
+2019-11-29 21:58:16.151  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 21:58:16.183  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-11-29 21:58:16.198  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-11-29 21:58:16.198 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleByDate   : ==>  Preparing: SELECT DISTINCT create_date FROM schedule ORDER BY create_date 
+2019-11-29 21:58:16.198 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleByDate   : ==> Parameters: 
+2019-11-29 21:58:16.203 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.BookingMapper.findScheduleByDate   : <==      Total: 7
+2019-11-29 21:58:16.203  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.204  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findScheduleByDate
+2019-11-29 21:58:16.204  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.BookingServiceImpl
+2019-11-29 21:58:16.208  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.BookingServiceImpl
+2019-11-29 21:58:16.209  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.219 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.220 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-21(String)
+2019-11-29 21:58:16.223 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:58:16.223  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.224  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.224  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.224  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.224  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.224 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.225 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-22(String)
+2019-11-29 21:58:16.228 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-29 21:58:16.229  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.229  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.229  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.230  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.230  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.231 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.232 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-23(String)
+2019-11-29 21:58:16.234 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:58:16.234  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.234  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.234  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.235  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.235  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.235 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.236 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-24(String)
+2019-11-29 21:58:16.241 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:58:16.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.242 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.243 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-25(String)
+2019-11-29 21:58:16.245 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:58:16.245  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.245  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.245  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.245  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.245  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.247 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.248 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-26(String)
+2019-11-29 21:58:16.252 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 2
+2019-11-29 21:58:16.253  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.254  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.254  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.255  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.255  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:58:16.256 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==>  Preparing: SELECT * FROM schedule s join classes c on s.classes_id = c.classes_id join trainer t on s.trainer_id = t.trainer_id WHERE s.create_date = ? order by s.create_date 
+2019-11-29 21:58:16.257 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : ==> Parameters: 2019-11-27(String)
+2019-11-29 21:58:16.259 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.mapper.ScheduleMapper.findSchedule   : <==      Total: 1
+2019-11-29 21:58:16.260  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 21:58:16.260  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for findSchedule
+2019-11-29 21:58:16.260  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.260  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for class com.tiktop.services.ScheduleServiceImpl
+2019-11-29 21:58:16.260  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 1
+2019-11-29 21:59:05.246  INFO 9408 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-11-29 21:59:05.267  INFO 9408 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-11-29 21:59:05.785  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 21:59:05.786  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 21:59:06.264  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 21:59:06.314  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 21:59:06.314  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 21:59:06.331  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 21:59:06.987  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.24 seconds (JVM running for 358.959)
+2019-11-29 22:00:19.647  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:00:19.648  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:00:20.175  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:00:20.246  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:00:20.246  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:00:20.263  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:00:20.873  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.251 seconds (JVM running for 432.845)
+2019-11-29 22:00:40.625  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:00:40.625  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:00:41.100  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:00:41.233  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:00:41.233  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:00:41.249  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:00:42.374  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.772 seconds (JVM running for 454.346)
+2019-11-29 22:00:45.101  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:00:45.130  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-11-29 22:00:45.144  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-11-29 22:00:45.144 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:00:45.148 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:00:45.151 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:00:45.152  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:00:45.152  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:00:45.152  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:00:45.177 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance WHERE member_id = ? 
+2019-11-29 22:00:45.178 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 20(Integer)
+2019-11-29 22:00:45.180 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 4
+2019-11-29 22:00:45.181  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:00:45.181  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:00:45.181  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:07.431 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:01:07.432 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:01:07.434 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:01:07.435  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:07.435  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:07.435  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:07.437  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:07.437  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:07.437  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:22.149 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:01:22.150 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:01:22.152 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:01:22.153  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:22.153  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:22.153  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:22.153  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:22.153  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:22.153  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:22.765  INFO 9408 --- [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-11-29 22:01:22.772  INFO 9408 --- [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-11-29 22:01:23.319  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:01:23.319  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:01:23.680  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:01:23.711  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:01:23.711  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:01:23.724  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:01:24.227  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.935 seconds (JVM running for 496.199)
+2019-11-29 22:01:27.662  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:01:27.695  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-11-29 22:01:27.703  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-11-29 22:01:27.704 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:01:27.704 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:01:27.707 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:01:27.708  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:27.708  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:27.708  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:27.718  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:27.718  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:27.718  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:40.971  INFO 9408 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-11-29 22:01:40.999  INFO 9408 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-11-29 22:01:41.390  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:01:41.390  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:01:41.717  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:01:41.749  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:01:41.749  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:01:41.757  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:01:42.162  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.794 seconds (JVM running for 514.134)
+2019-11-29 22:01:46.494  INFO 9408 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:01:46.516  INFO 9408 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-11-29 22:01:46.522  INFO 9408 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-11-29 22:01:46.523 DEBUG 9408 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:01:46.523 DEBUG 9408 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:01:46.526 DEBUG 9408 --- [http-nio-8080-exec-2] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:01:46.526  INFO 9408 --- [http-nio-8080-exec-2] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:46.526  INFO 9408 --- [http-nio-8080-exec-2] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:01:46.526  INFO 9408 --- [http-nio-8080-exec-2] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:01:46.536  INFO 9408 --- [http-nio-8080-exec-2] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:01:46.536  INFO 9408 --- [http-nio-8080-exec-2] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:01:46.537  INFO 9408 --- [http-nio-8080-exec-2] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for 
+2019-11-29 22:02:05.063  INFO 9408 --- [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-11-29 22:02:05.079  INFO 9408 --- [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-11-29 22:02:05.531  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:02:05.531  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:02:05.852  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:02:05.888  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:02:05.888  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:02:05.899  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:02:06.325  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.827 seconds (JVM running for 538.297)
+2019-11-29 22:02:06.473  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:02:06.522  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-11-29 22:02:06.530  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-11-29 22:02:06.531 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:02:06.531 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:02:06.539 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:02:06.541  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:02:06.542  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:02:06.542  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for com.tiktop.model.Member@31d53fb9
+2019-11-29 22:02:06.554  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:02:06.555  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:02:06.555  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for false
+2019-11-29 22:02:42.527  INFO 9408 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-11-29 22:02:42.549  INFO 9408 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-11-29 22:02:42.943  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:02:42.944  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:02:43.215  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:02:43.246  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:02:43.247  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:02:43.255  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:02:43.723  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.806 seconds (JVM running for 575.695)
+2019-11-29 22:02:52.984  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:02:52.985  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:02:53.512  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:02:53.544  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:02:53.544  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:02:53.557  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:02:54.148  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.207 seconds (JVM running for 586.119)
+2019-11-29 22:02:54.879  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:02:54.911  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2019-11-29 22:02:54.917  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2019-11-29 22:02:54.918 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:02:54.918 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:02:54.921 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:02:54.921  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:02:54.921  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:02:54.922  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result com.tiktop.model.Member@60bef81a
+2019-11-29 22:02:54.934  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:02:54.934  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:02:54.934  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result false
+2019-11-29 22:03:17.691  INFO 9408 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2019-11-29 22:03:17.708  INFO 9408 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2019-11-29 22:03:18.143  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:03:18.143  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:03:18.508  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:03:18.539  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:03:18.539  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:03:18.548  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:03:19.052  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.93 seconds (JVM running for 611.024)
+2019-11-29 22:03:19.608  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:03:19.631  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2019-11-29 22:03:19.636  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2019-11-29 22:03:19.637 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:03:19.637 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:03:19.639 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:03:19.640  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:03:19.640  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:03:19.640  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result com.tiktop.model.Member@9d69ee7
+2019-11-29 22:03:19.648  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:03:19.648  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:03:19.649  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result false
+2019-11-29 22:03:32.996 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:03:32.997 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:03:32.998 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:03:32.999  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:03:32.999  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:03:33.000  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result com.tiktop.model.Member@2f3eb81e
+2019-11-29 22:03:33.000  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:03:33.000  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:03:33.000  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result true
+2019-11-29 22:03:33.006 DEBUG 9408 --- [http-nio-8080-exec-6] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-29 22:03:33.006 DEBUG 9408 --- [http-nio-8080-exec-6] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-21(String), 2019-11-28(String), 20(Integer)
+2019-11-29 22:03:33.007 DEBUG 9408 --- [http-nio-8080-exec-6] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 0
+2019-11-29 22:03:33.008  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:03:33.009  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(List com.tiktop.services.AttendanceServiceImpl.checkAttendance(Attendance))
+2019-11-29 22:03:33.009  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result []
+2019-11-29 22:03:49.162  INFO 9408 --- [Thread-89] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2019-11-29 22:03:49.171  INFO 9408 --- [Thread-89] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2019-11-29 22:03:49.612  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:03:49.612  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:03:49.914  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:03:49.945  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:03:49.945  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:03:49.955  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:03:50.436  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.85 seconds (JVM running for 642.408)
+2019-11-29 22:04:05.081  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:04:05.081  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:04:05.444  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:04:05.492  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:04:05.493  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:04:05.507  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:04:06.094  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.044 seconds (JVM running for 658.066)
+2019-11-29 22:04:06.251  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:04:09.078  INFO 9408 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2019-11-29 22:04:09.084  INFO 9408 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2019-11-29 22:04:09.085 DEBUG 9408 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:04:09.085 DEBUG 9408 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:04:09.087 DEBUG 9408 --- [http-nio-8080-exec-5] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:04:09.087  INFO 9408 --- [http-nio-8080-exec-5] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:04:09.088  INFO 9408 --- [http-nio-8080-exec-5] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:04:09.088  INFO 9408 --- [http-nio-8080-exec-5] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result class com.tiktop.model.Member
+2019-11-29 22:06:10.176  INFO 9408 --- [Thread-101] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2019-11-29 22:06:10.188  INFO 9408 --- [Thread-101] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2019-11-29 22:06:10.605  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:06:10.605  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:06:10.918  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:06:10.950  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:06:10.950  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:06:10.958  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:06:11.536  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.958 seconds (JVM running for 783.508)
+2019-11-29 22:06:15.100  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:06:15.132  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2019-11-29 22:06:15.137  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2019-11-29 22:06:15.137 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:06:15.137 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:06:15.140 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:06:15.140  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:06:15.141  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:06:15.141  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result class com.tiktop.model.Member
+2019-11-29 22:06:20.724 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:06:20.725 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:06:20.727 DEBUG 9408 --- [http-nio-8080-exec-6] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:06:20.727  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:06:20.728  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:06:20.728  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result class com.tiktop.model.Member
+2019-11-29 22:06:20.733  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:06:20.733  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:06:20.734  INFO 9408 --- [http-nio-8080-exec-6] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result class java.lang.Boolean
+2019-11-29 22:06:45.715  INFO 9408 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2019-11-29 22:06:45.724  INFO 9408 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2019-11-29 22:06:46.173  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:06:46.174  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:06:46.507  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:06:46.541  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:06:46.541  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:06:46.549  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:06:47.131  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.979 seconds (JVM running for 819.102)
+2019-11-29 22:07:52.031  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:07:52.032  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:07:52.324  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:07:52.357  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:07:52.357  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:07:52.365  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:07:52.867  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.862 seconds (JVM running for 884.838)
+2019-11-29 22:08:45.097  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:08:45.097  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:08:45.392  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:08:45.425  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:08:45.425  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:08:45.436  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:08:45.840  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.766 seconds (JVM running for 937.812)
+2019-11-29 22:14:54.244  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:14:54.244  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:14:54.545  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:14:54.574  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:14:54.574  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:14:54.582  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:14:55.042  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.82 seconds (JVM running for 1307.014)
+2019-11-29 22:14:59.657  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:14:59.684  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2019-11-29 22:14:59.689  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2019-11-29 22:14:59.689 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:14:59.689 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:14:59.691 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:14:59.692  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:14:59.692  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:14:59.692  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result com.tiktop.model.Member@1975354b
+2019-11-29 22:14:59.702  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:14:59.702  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:14:59.702  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result false
+2019-11-29 22:15:40.632  INFO 9408 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2019-11-29 22:15:40.641  INFO 9408 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2019-11-29 22:15:41.037  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:15:41.038  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:15:41.307  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:15:41.336  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:15:41.336  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:15:41.344  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:15:41.793  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.776 seconds (JVM running for 1353.765)
+2019-11-29 22:15:43.510  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:15:43.533  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2019-11-29 22:15:43.541  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2019-11-29 22:15:43.541 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:15:43.541 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:15:43.543 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:15:43.544  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:15:43.544  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:15:43.544  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result com.tiktop.model.Member@6034047a
+2019-11-29 22:15:43.550  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:15:43.550  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:15:43.550  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result false
+2019-11-29 22:17:08.363  INFO 9408 --- [Thread-137] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2019-11-29 22:17:08.369  INFO 9408 --- [Thread-137] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2019-11-29 22:17:08.888  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:17:08.889  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:17:09.219  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:17:09.255  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:17:09.255  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:17:09.264  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:17:09.759  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.902 seconds (JVM running for 1441.731)
+2019-11-29 22:17:27.389  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:17:27.389  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:17:27.710  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:17:27.738  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:17:27.738  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:17:27.745  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:17:28.130  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.762 seconds (JVM running for 1460.103)
+2019-11-29 22:17:33.236  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:17:33.236  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:17:33.623  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:17:33.652  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:17:33.652  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:17:33.660  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:17:34.234  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 1.02 seconds (JVM running for 1466.206)
+2019-11-29 22:17:42.959  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:17:42.981  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2019-11-29 22:17:42.985  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2019-11-29 22:17:42.986 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:17:42.986 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:17:42.987 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:17:42.988  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:17:42.988  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:17:42.988  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result com.tiktop.model.Member@4c9a0aaf
+2019-11-29 22:17:42.989  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:17:42.994  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:17:42.994  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for joinpoint execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:17:42.994  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for result false
+2019-11-29 22:17:42.994  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:20:46.950  INFO 9408 --- [Thread-155] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2019-11-29 22:20:46.976  INFO 9408 --- [Thread-155] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2019-11-29 22:20:47.438  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:20:47.438  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:20:47.699  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:20:47.736  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:20:47.736  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:20:47.745  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:20:48.142  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.724 seconds (JVM running for 1660.114)
+2019-11-29 22:20:55.373  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:20:55.373  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:20:55.634  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:20:55.674  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:20:55.674  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:20:55.689  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:20:55.967  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.614 seconds (JVM running for 1667.939)
+2019-11-29 22:20:59.984  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:20:59.984  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:21:00.250  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:21:00.291  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:21:00.291  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:21:00.305  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:21:00.317  WARN 9408 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberAccessObject' defined in file [C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement\target\classes\com\tiktop\config\MemberAccessObject.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tiktop.config.MemberAccessObject$$EnhancerBySpringCGLIB$$ecd89c20]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Before cannot be resolved to a type
+	Syntax error on token ""execution(* com.tiktop.services.*.*(..))"", invalid MemberValuePairs
+
+2019-11-29 22:21:00.318  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-11-29 22:21:00.336 ERROR 9408 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberAccessObject' defined in file [C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement\target\classes\com\tiktop\config\MemberAccessObject.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tiktop.config.MemberAccessObject$$EnhancerBySpringCGLIB$$ecd89c20]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Before cannot be resolved to a type
+	Syntax error on token ""execution(* com.tiktop.services.*.*(..))"", invalid MemberValuePairs
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:877) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.0.M5.jar:2.2.0.M5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:746) [spring-boot-2.2.0.M5.jar:2.2.0.M5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:396) [spring-boot-2.2.0.M5.jar:2.2.0.M5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.0.M5.jar:2.2.0.M5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1225) [spring-boot-2.2.0.M5.jar:2.2.0.M5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214) [spring-boot-2.2.0.M5.jar:2.2.0.M5]
+	at com.tiktop.TiktopgymmanagementApplication.main(TiktopgymmanagementApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.0.M5.jar:2.2.0.M5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tiktop.config.MemberAccessObject$$EnhancerBySpringCGLIB$$ecd89c20]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Before cannot be resolved to a type
+	Syntax error on token ""execution(* com.tiktop.services.*.*(..))"", invalid MemberValuePairs
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1313) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Before cannot be resolved to a type
+	Syntax error on token ""execution(* com.tiktop.services.*.*(..))"", invalid MemberValuePairs
+
+	at com.tiktop.config.MemberAccessObject.<init>(MemberAccessObject.java:17) ~[classes/:na]
+	at com.tiktop.config.MemberAccessObject$$EnhancerBySpringCGLIB$$ecd89c20.<init>(<generated>) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_191]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:200) ~[spring-beans-5.2.0.RC1.jar:5.2.0.RC1]
+	... 24 common frames omitted
+
+2019-11-29 22:21:02.958  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:21:02.958  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:21:03.240  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:21:03.267  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:21:03.267  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:21:03.275  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:21:03.759  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.832 seconds (JVM running for 1675.731)
+2019-11-29 22:21:06.786  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:21:06.786  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:21:07.067  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:21:07.139  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:21:07.139  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:21:07.152  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:21:07.514  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.749 seconds (JVM running for 1679.487)
+2019-11-29 22:21:17.790  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Starting TiktopgymmanagementApplication on DESKTOP-70GHNSM with PID 9408 (started by Paing in C:\Users\Paing\Desktop\sts testing environment\tiktopgym_managementsystem\tiktopgymmanagement)
+2019-11-29 22:21:17.791  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : No active profile set, falling back to default profiles: default
+2019-11-29 22:21:18.140  WARN 9408 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-29 22:21:18.176  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-29 22:21:18.176  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-29 22:21:18.187  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-11-29 22:21:18.614  INFO 9408 --- [restartedMain] c.tiktop.TiktopgymmanagementApplication  : Started TiktopgymmanagementApplication in 0.85 seconds (JVM running for 1690.586)
+2019-11-29 22:21:24.354  INFO 9408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-29 22:21:24.362  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:21:24.362  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:21:24.362  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:21:24.375  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2019-11-29 22:21:24.384  INFO 9408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2019-11-29 22:21:24.384 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:21:24.384 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:21:24.386 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:21:24.388  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:21:24.388  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.AttendanceServiceImpl.findAttendance(Attendance))
+2019-11-29 22:21:24.388  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:21:24.401 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : ==>  Preparing: SELECT * FROM attendance WHERE member_id = ? 
+2019-11-29 22:21:24.402 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : ==> Parameters: 20(Integer)
+2019-11-29 22:21:24.403 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.findAttendance    : <==      Total: 4
+2019-11-29 22:21:51.235  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:21:51.236  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Member com.tiktop.services.MemberServiceImpl.findMemberByLogin(String))
+2019-11-29 22:21:51.237  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:21:51.238 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==>  Preparing: SELECT * FROM member WHERE login = ? 
+2019-11-29 22:21:51.238 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : ==> Parameters: ppp(String)
+2019-11-29 22:21:51.240 DEBUG 9408 --- [http-nio-8080-exec-1] c.tiktop.mapper.MemberMapper.findMember  : <==      Total: 4
+2019-11-29 22:21:51.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:21:51.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Boolean com.tiktop.services.AttendanceServiceImpl.checkDate(Attendance))
+2019-11-29 22:21:51.241  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:21:51.242  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:21:51.243  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(List com.tiktop.services.AttendanceServiceImpl.checkAttendance(Attendance))
+2019-11-29 22:21:51.244  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
+2019-11-29 22:21:51.244 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : ==>  Preparing: SELECT * FROM attendance WHERE attendance_date BETWEEN CAST(? AS DATE) AND CAST(? AS DATE) and member_id = ? 
+2019-11-29 22:21:51.244 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : ==> Parameters: 2019-11-28(String), 2019-11-30(String), 20(Integer)
+2019-11-29 22:21:51.246 DEBUG 9408 --- [http-nio-8080-exec-1] c.t.m.AttendanceMapper.checkAttendance   : <==      Total: 0
+2019-11-29 22:21:51.246  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Check for user access 
+2019-11-29 22:21:51.246  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution for execution(Attendance com.tiktop.services.AttendanceServiceImpl.bodyMeasurementCheck(List))
+2019-11-29 22:21:51.246  INFO 9408 --- [http-nio-8080-exec-1] sObject$$EnhancerBySpringCGLIB$$ecd89c20 : Allowed execution org.springframework.security.authentication.UsernamePasswordAuthenticationToken@bf4dd5cb: Principal: org.springframework.security.core.userdetails.User@1b270: Username: ppp; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_MEMBER; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@12afc: RemoteIpAddress: 127.0.0.1; SessionId: 776D359949D6AA414742F621720E2855; Granted Authorities: ROLE_MEMBER
