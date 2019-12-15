@@ -1,13 +1,19 @@
 package com.tiktop.model;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 public class Attendance {
-	
+
 	public Integer attendanceId;
 	@NotNull
+	@Min(4)
+	@Max(7)
 	public Double height;
 	@NotNull
+	@Min(50)
+	@Max(700)
 	public Double weight;
 	@NotNull
 	public String attendanceDate;
@@ -18,11 +24,11 @@ public class Attendance {
 	public String endDate;
 	public Double resultHeight;
 	public Double resultWeight;
-	
+
 	public String getAttendanceDate() {
 		return attendanceDate;
 	}
-	
+
 	public void setAttendanceDate(String attendanceDate) {
 		this.attendanceDate = attendanceDate;
 	}

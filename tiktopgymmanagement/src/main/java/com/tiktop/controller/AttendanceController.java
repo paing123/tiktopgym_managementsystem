@@ -58,16 +58,16 @@ public class AttendanceController {
 		List<Attendance> attendances = attendanceService.findAttendance(attendance);
 		ModelAndView mav = new ModelAndView("member/memberAttendance");
 		mav.addObject("attendances", attendances);
-		mav.addObject("login",login);
+		mav.addObject("login", login);
 		return mav;
 	}
 
 	@RequestMapping(value = { "/member/bodycheck" }, method = RequestMethod.GET)
-	public String checkbody(Model model,HttpSession session) {
-		String login = (String)session.getAttribute("currentUser");
+	public String checkbody(Model model, HttpSession session) {
+		String login = (String) session.getAttribute("currentUser");
 		Attendance attendance = new Attendance();
 		model.addAttribute("attendance", attendance);
-		model.addAttribute("login",login);
+		model.addAttribute("login", login);
 		return "member/memberbodycheck";
 	}
 
@@ -79,7 +79,7 @@ public class AttendanceController {
 		ModelAndView mav = new ModelAndView("member/memberbodycheck");
 		if (attendance.startDate == null | attendance.endDate == null) {
 			mav.addObject("nulldate", "nulldate");
-			mav.addObject("login",login);
+			mav.addObject("login", login);
 			return mav;
 		}
 		if (attendanceService.checkDate(attendance)) {
@@ -90,13 +90,13 @@ public class AttendanceController {
 				mav = attendanceService.checkLossGain(attendance);
 				return mav;
 			} catch (Exception e) {
-				mav.addObject("NoRecord","NoRecord");
-				mav.addObject("login",login);
+				mav.addObject("NoRecord", "NoRecord");
+				mav.addObject("login", login);
 				return mav;
 			}
 		}
 		mav.addObject("invalidDate", "invalidDate");
-		mav.addObject("login",login);
+		mav.addObject("login", login);
 		return mav;
 
 	}
@@ -114,6 +114,8 @@ public class AttendanceController {
 	public String saveAttendance(@Valid @ModelAttribute("attendance") Attendance attendance,
 			BindingResult bindingResult, Model model) {
 		if (bindingResult.hasErrors()) {
+			List<Member> members = memberService.findMember(new Member());
+			model.addAttribute("members", members);
 			return "admin/addAttendance";
 		}
 		attendanceService.save(attendance);
@@ -121,7 +123,7 @@ public class AttendanceController {
 		List<Attendance> attendances = attendanceService.findAttendance(attendance1);
 		model.addAttribute("attendances", attendances);
 		model.addAttribute("attendance", attendance1);
-		model.addAttribute("success","success");
+		model.addAttribute("success", "success");
 		return "admin/attendance";
 	}
 
@@ -136,7 +138,7 @@ public class AttendanceController {
 	}
 
 	@GetMapping("/admin/deleteAttendance/{id}")
-	public ModelAndView deleteAttendance(@ModelAttribute("id") Integer id){
+	public ModelAndView deleteAttendance(@ModelAttribute("id") Integer id) {
 		Attendance attendance = new Attendance();
 		ModelAndView mav = new ModelAndView("admin/attendance");
 		List<Attendance> attendances = attendanceService.findAttendance(attendance);
@@ -146,7 +148,7 @@ public class AttendanceController {
 			attendanceService.delete(id);
 			return mav;
 		} catch (Exception e) {
-			mav.addObject("error","error");
+			mav.addObject("error", "error");
 			return mav;
 		}
 	}

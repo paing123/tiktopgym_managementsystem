@@ -15,10 +15,10 @@ public class UserPrincipal implements UserDetails,GrantedAuthority {
         this.member = member;
     }
 
-    @SuppressWarnings("unchecked")
 	@Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return (Collection<? extends GrantedAuthority>) Arrays.asList(getAuthorities());
+        //return (Collection<? extends GrantedAuthority>) Arrays.asList(getAuthorities());
+    	return Arrays.asList();
     }
 
     @Override
