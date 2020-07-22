@@ -8,9 +8,11 @@ import com.tiktop.restapitest.RestClientApiTest;
 @SpringBootApplication
 public class TiktopgymmanagementApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		SpringApplication.run(TiktopgymmanagementApplication.class, args);
 		RestClientApiTest rct= new RestClientApiTest();
 		rct.selectMemberList();
+		rct.selectMember();
+		rct.countCovid19WorldWideList();
 	}
 }
